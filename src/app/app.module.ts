@@ -17,7 +17,7 @@ import { AuthComponent } from './Components/service/auth/auth.component';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatIconModule} from '@angular/material/icon'; 
 import { MatButtonModule } from '@angular/material/button';
-import { PatientAddDeleteComponent } from './patient-add-delete/patient-add-delete.component';
+import { PatientAddDeleteComponent } from './dialog/patient-add-delete/patient-add-delete.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {  MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -28,6 +28,10 @@ import { AddPatientComponent } from './pages/patient/add-patient/add-patient.com
 import { EditPatientComponent } from './pages/patient/edit-patient/edit-patient.component';
 import { ViewPatientComponent } from './pages/patient/view-patient/view-patient.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ViewDoctorComponent } from './pages/doctor/view-doctor/view-doctor.component';
+import { AddDoctorComponent } from './pages/doctor/add-doctor/add-doctor.component';
+import { EditDoctorComponent } from './pages/doctor/edit-doctor/edit-doctor.component';
+import { DoctorComponent } from './dialog/doctor/doctor.component';
  
 
 @NgModule({
@@ -44,6 +48,10 @@ import { NavigationComponent } from './navigation/navigation.component';
     EditPatientComponent,
     ViewPatientComponent,
     NavigationComponent,
+    ViewDoctorComponent,
+    AddDoctorComponent,
+    EditDoctorComponent,
+    DoctorComponent,
     
     
   ],

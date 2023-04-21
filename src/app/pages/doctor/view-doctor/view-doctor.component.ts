@@ -1,32 +1,31 @@
 import { Component, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { PatientService } from 'src/app/shared/services/patient.service';
-import { AddPatientComponent } from '../add-patient/add-patient.component';
-import { Patient } from 'src/app/shared/models/patient';
-import { EditPatientComponent } from '../edit-patient/edit-patient.component';
-import { MatDialog } from '@angular/material/dialog';
+import { DoctorService } from 'src/app/shared/services/doctor.service';
+import { AddDoctorComponent } from '../add-doctor/add-doctor.component';
+import { Doctor } from 'src/app/shared/models/doctor';
+import { EditDoctorComponent } from '../edit-doctor/edit-doctor.component';
 
 @Component({
-  selector: 'app-view-patient',
-  templateUrl: './view-patient.component.html',
-  styleUrls: ['./view-patient.component.css']
+  selector: 'app-view-doctor',
+  templateUrl: './view-doctor.component.html',
+  styleUrls: ['./view-doctor.component.css']
 })
-export class ViewPatientComponent {
-
-  patientDetails: any;
+export class ViewDoctorComponent {
+  doctorDetails: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<any>;
 
   dataSource!: MatTableDataSource<any>;
-  displayedColumns = ['id','name','address','phoneNo','gender','email','actions'];
+  displayedColumns = ['id','name','address','email','phoneNo','actions'];
   notLoggedIn: any;
   constructor(
-    private patientService:PatientService,
+    private doctorServies:DoctorService,
     private router: Router,
     private dialog:MatDialog
   ) {}
@@ -36,7 +35,7 @@ export class ViewPatientComponent {
   }
 
   onReload() {
-    this.patientService.getAll().subscribe({
+    this.doctorServies.getAll().subscribe({
       next: (res: any) => {
         this.dataSource = res;
         this.dataSource = new MatTableDataSource(res);
@@ -53,24 +52,24 @@ export class ViewPatientComponent {
       width: '60%',
       disableClose: true,
     };
-    this.dialog.open(AddPatientComponent, options);
+    this.dialog.open(AddDoctorComponent, options);
   }
 
-  onEdit(item: Patient) {
+  onEdit(item: Doctor) {
     const options = {
       data: item,
       width: '60%',
       disableClose: true,
     };
-    this.dialog.open(EditPatientComponent, options);
+    this.dialog.open(EditDoctorComponent, options);
   }
 
  
 
-  onDelete(item: Patient) {
-    this.patientService.delete(item.id).subscribe({
+  onDelete(item: Doctor) {
+    this.doctorServies.delete(item.id).subscribe({
       next: () => {
-        alert("Delete succfull");
+        alert("Delete successfull");
         this.onReload();
       },
       error: (err) => {
@@ -83,4 +82,5 @@ export class ViewPatientComponent {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
 }

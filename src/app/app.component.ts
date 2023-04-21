@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { PatientAddDeleteComponent } from './patient-add-delete/patient-add-delete.component';
+import { PatientAddDeleteComponent } from './dialog/patient-add-delete/patient-add-delete.component';
 
 @Component({
   selector: 'app-root',

@@ -4,9 +4,11 @@ import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
 import { PatienlistComponent } from './Components/patienlist/patienlist.component';
 import { RegisterComponent } from './Components/register/register.component';
-import { PatientAddDeleteComponent } from './patient-add-delete/patient-add-delete.component';
+import { PatientAddDeleteComponent } from './dialog/patient-add-delete/patient-add-delete.component';
 import { ViewPatientComponent } from './pages/patient/view-patient/view-patient.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ViewDoctorComponent } from './pages/doctor/view-doctor/view-doctor.component';
+import { DoctorComponent } from './dialog/doctor/doctor.component';
 
 const routes: Routes = [
   {
@@ -14,7 +16,9 @@ const routes: Routes = [
     component: NavigationComponent,
     children: [
       { path: 'patient', component: ViewPatientComponent },
-      { path: 'patient-add-delete', component: PatientAddDeleteComponent },
+     
+      { path: 'view', component: ViewDoctorComponent },
+     
     ],
   },
   { path: 'register', component: RegisterComponent },

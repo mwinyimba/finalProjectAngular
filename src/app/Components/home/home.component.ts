@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { PatientAddDeleteComponent } from 'src/app/patient-add-delete/patient-add-delete.component';
+import { PatientAddDeleteComponent } from 'src/app/dialog/patient-add-delete/patient-add-delete.component';
 
 @Component({
   selector: 'app-home',

@@ -1,67 +1,68 @@
 <!-- nimeeta formGroup kutoka katika component.ts na method ya onFormSubmit -->
 <form [formGroup]="patientForm" (ngSubmit)="onFormSubmit()">
-    <h1>Update Patient</h1><hr>
-    <div class="row">
-      <div class="col-sm-12">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>fullName</mat-label>
-          <input matInput type="text" placeholder="fullName" formControlName="name">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Address</mat-label>
-          <input matInput type="text" placeholder="Addresse" formControlName="address">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>PhoneNO</mat-label>
-          <input matInput type="number" placeholder="PhoneNumber" formControlName="phoneNo">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Email</mat-label>
-          <input matInput type="text" placeholder="email" formControlName="email">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>date of birth</mat-label>
-          <input matInput type="date" formControlName="dob">
-        </mat-form-field>
-      </div>
+  <h1>Update Patient</h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>fullName</mat-label>
+        <input matInput type="text" placeholder="fullName" formControlName="name">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" placeholder="Addresse" formControlName="address">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>PhoneNO</mat-label>
+        <input matInput type="number" placeholder="PhoneNumber" formControlName="phoneNo">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" placeholder="email" formControlName="email">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>date of birth</mat-label>
+        <input matInput type="date" formControlName="dob">
+      </mat-form-field>
+    </div>
 
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>place</mat-label>
-          <input matInput type="text" placeholder="place" formControlName="place">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Gender</mat-label>
-          <mat-select formControlName="gender">
-            <mat-option value="Male">Male</mat-option>
-            <mat-option value="Female">Female</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <!-- <mat-radio-group aria-label="Select an option" >
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>place</mat-label>
+        <input matInput type="text" placeholder="place" formControlName="place">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <mat-radio-group aria-label="Select an option" >
           <mat-label><b>Gender</b></mat-label>
           <mat-radio-button value="male">Male</mat-radio-button>
           <mat-radio-button value="female">Female</mat-radio-button>
         </mat-radio-group> -->
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <div mat-dialog-actions>
+        <button mat-raised-button class="btn btn-danger" matDialogClose="no">Close</button>
+        <button mat-raised-button color="primary">save</button>
       </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-sm-12">
-        <div mat-dialog-actions>
-          <button mat-raised-button class="btn btn-danger" matDialogClose="no">Close</button>
-          <button mat-raised-button color="primary">save</button>
-        </div>
-      </div>
-    </div>
-    
-  </form>
+  </div>
+
+</form>
