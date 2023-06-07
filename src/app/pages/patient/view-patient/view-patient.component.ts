@@ -34,7 +34,7 @@ export class ViewPatientComponent {
     this.onReload();
     this.dataSource = new MatTableDataSource();
   }
-
+  name = 'MWINYI'
   onReload() {
     this.patientService.getAll().subscribe({
       next: (res: any) => {

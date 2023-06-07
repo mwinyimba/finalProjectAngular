@@ -8,12 +8,7 @@ import { MaterialModule } from 'src/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 import { ToastrModule } from 'ngx-toastr';
-import { RegisterComponent } from './Components/register/register.component';
-import { LoginComponent } from './Components/login/login.component';
-import { HomeComponent } from './Components/home/home.component';
-import { PatienlistComponent } from './Components/patienlist/patienlist.component';
-import { UpdatepopupComponent } from './Components/updatepopup/updatepopup.component';
-import { AuthComponent } from './Components/service/auth/auth.component';
+
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatIconModule} from '@angular/material/icon'; 
 import { MatButtonModule } from '@angular/material/button';
@@ -27,31 +22,55 @@ import { MatRadioModule } from '@angular/material/radio';
 import { AddPatientComponent } from './pages/patient/add-patient/add-patient.component';
 import { EditPatientComponent } from './pages/patient/edit-patient/edit-patient.component';
 import { ViewPatientComponent } from './pages/patient/view-patient/view-patient.component';
-import { NavigationComponent } from './navigation/navigation.component';
+
 import { ViewDoctorComponent } from './pages/doctor/view-doctor/view-doctor.component';
 import { AddDoctorComponent } from './pages/doctor/add-doctor/add-doctor.component';
 import { EditDoctorComponent } from './pages/doctor/edit-doctor/edit-doctor.component';
 import { DoctorComponent } from './dialog/doctor/doctor.component';
+import { PatientComponent } from './doctor/patient/patient.component';
+import { PatientDetailComponent } from './doctor/patient-detail/patient-detail.component';
+import { EmergenceComponent } from './doctor/emergence/emergence.component';
+import { ScheduleComponent } from './doctor/schedule/schedule.component';
+import { NotificationComponent } from './doctor/notification/notification.component';
+import { NavigationComponent } from './doctor/navigation/navigation.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { LoginComponent } from './login/login.component';
+import { LabtechNavComponent } from './lab-tech/labtech-nav/labtech-nav.component';
+import { PatientFormComponent } from './lab-tech/patient-form/patient-form.component';
+import { PatientsComponent } from './lab-tech/patients/patients.component';
+import { MessageComponent } from './lab-tech/message/message.component';
+import { RegNavComponent } from './pages/reg-nav/reg-nav.component';
+import { RegHomeComponent } from './pages/reg-home/reg-home.component';
+import { RegLogoutComponent } from './pages/reg-logout/reg-logout.component';
  
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    LoginComponent,
-    HomeComponent,
-    PatienlistComponent,
-    UpdatepopupComponent,
-    AuthComponent,
+   
     PatientAddDeleteComponent,
     AddPatientComponent,
     EditPatientComponent,
     ViewPatientComponent,
-    NavigationComponent,
+    
     ViewDoctorComponent,
     AddDoctorComponent,
     EditDoctorComponent,
     DoctorComponent,
+    PatientComponent,
+    PatientDetailComponent,
+    EmergenceComponent,
+    ScheduleComponent,
+    NotificationComponent,
+    NavigationComponent,
+    LoginComponent,
+    LabtechNavComponent,
+    PatientFormComponent,
+    PatientsComponent,
+    MessageComponent,
+    RegNavComponent,
+    RegHomeComponent,
+    RegLogoutComponent,
     
     
   ],
@@ -71,7 +90,8 @@ import { DoctorComponent } from './dialog/doctor/doctor.component';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatMenuModule,
 
     
    

@@ -1,0 +1,7 @@
+.bar:hover{
+    color: #fff;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

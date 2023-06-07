@@ -1,0 +1,33 @@
+<div class="contaner p-5">
+    <mat-card class="shadow">
+        <mat-card-header>
+            <mat-card-title> <h1> List of patient</h1></mat-card-title>
+            <mat-card-subtitle>4</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-bordered " >
+                <thead>
+                <tr>
+                        <th>Sn</th>
+                        <th>Patients Id</th>
+                        <th>Full Name</th>
+                        <th>Gender</th>
+                        <th> View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let partient of partient,let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{partient.pId}}</td>
+                            <td>{{partient.Fname}}</td>
+                            <td>{{partient.Gender}}</td>
+                            <td>
+                                <a routerLink="../details"><button mat-raised-button color="primary">View Details</button></a>
+                            </td>
+                        </tr>
+                    </tbody>
+            
+            </table>
+        </mat-card-content>
+    </mat-card>
+    </div>
