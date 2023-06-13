@@ -41,7 +41,7 @@ a{
   }
   
   .lnk:hover{
-    background-color: #0d6efd;
+    background-color: #31d4d4;
   }
   .sidenav .closebtn {
     position: absolute;
@@ -51,7 +51,7 @@ a{
     margin-left: 50px;
   }
   .mybg{
-    background-color: #0d6efd;
+    background-color: #31d4d4;
   }
   #main {
     transition: margin-left .5s;

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 import { ToastrModule } from 'ngx-toastr';
 
@@ -40,7 +40,16 @@ import { RegNavComponent } from './pages/reg-nav/reg-nav.component';
 import { RegHomeComponent } from './pages/reg-home/reg-home.component';
 import { RegLogoutComponent } from './pages/reg-logout/reg-logout.component';
 import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
- 
+import { CommonModule } from '@angular/common';
+import { CalendarModule } from 'angular-calendar';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import { ReportComponent } from './doctor/report/report.component';
+import { LabReportComponent } from './lab-tech/lab-report/lab-report.component';
+import { RegReportComponent } from './pages/reg-report/reg-report.component';
+
+
 
 @NgModule({
   declarations: [
@@ -64,6 +73,9 @@ import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
     RegHomeComponent,
     RegLogoutComponent,
     LabHomeComponent,
+    ReportComponent,
+    LabReportComponent,
+    RegReportComponent,
     
     
   ],
@@ -85,8 +97,10 @@ import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
     MatNativeDateModule,
     MatRadioModule,
     MatMenuModule,
+    CommonModule, 
+    CalendarModule,
+    FullCalendarModule,
     
-
     
    
   ],
