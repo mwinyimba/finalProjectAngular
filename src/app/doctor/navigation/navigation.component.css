@@ -1,7 +1,13 @@
-.bar:hover{
-    color: #fff;
-    cursor: pointer;
-}
 a{
     text-decoration: none;
+}
+.bar:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+.size{
+    font-size: 2rm;
+}
+.bottom{
+    border-bottom: 1px solid #000;
 }

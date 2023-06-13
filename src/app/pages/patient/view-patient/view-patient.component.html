@@ -16,7 +16,7 @@
   </div>
   
   <div class="card card-body">
-  <div class="mat-elevation-z3 p-2 border">
+  <div class="mat-elevation-z3 p-2 border table-responsive">
     <table mat-table [dataSource]="dataSource" class="table table-striped table-sm" >
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef class="text-center"> <b>S/N.</b></th>
@@ -51,7 +51,7 @@
         </ng-container>
   
       <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef class="text-center">  ACTION </th>
+        <th mat-header-cell *matHeaderCellDef class="text-center"><b>ACTION</b> </th>
         <td mat-cell *matCellDef="let element">
           <a class="btn btn-outline-info btn-sm m-1" (click)="onEdit(element)">
             <i class="fa fa-edit"></i> edit

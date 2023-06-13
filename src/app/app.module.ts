@@ -23,10 +23,7 @@ import { AddPatientComponent } from './pages/patient/add-patient/add-patient.com
 import { EditPatientComponent } from './pages/patient/edit-patient/edit-patient.component';
 import { ViewPatientComponent } from './pages/patient/view-patient/view-patient.component';
 
-import { ViewDoctorComponent } from './pages/doctor/view-doctor/view-doctor.component';
-import { AddDoctorComponent } from './pages/doctor/add-doctor/add-doctor.component';
-import { EditDoctorComponent } from './pages/doctor/edit-doctor/edit-doctor.component';
-import { DoctorComponent } from './dialog/doctor/doctor.component';
+
 import { PatientComponent } from './doctor/patient/patient.component';
 import { PatientDetailComponent } from './doctor/patient-detail/patient-detail.component';
 import { EmergenceComponent } from './doctor/emergence/emergence.component';
@@ -47,16 +44,10 @@ import { RegLogoutComponent } from './pages/reg-logout/reg-logout.component';
 @NgModule({
   declarations: [
     AppComponent,
-   
     PatientAddDeleteComponent,
     AddPatientComponent,
     EditPatientComponent,
     ViewPatientComponent,
-    
-    ViewDoctorComponent,
-    AddDoctorComponent,
-    EditDoctorComponent,
-    DoctorComponent,
     PatientComponent,
     PatientDetailComponent,
     EmergenceComponent,
@@ -92,6 +83,7 @@ import { RegLogoutComponent } from './pages/reg-logout/reg-logout.component';
     MatNativeDateModule,
     MatRadioModule,
     MatMenuModule,
+    
 
     
    

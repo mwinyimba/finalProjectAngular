@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { PatientAddDeleteComponent } from './dialog/patient-add-delete/patient-add-delete.component';
 import { ViewPatientComponent } from './pages/patient/view-patient/view-patient.component';
-
-import { ViewDoctorComponent } from './pages/doctor/view-doctor/view-doctor.component';
-import { DoctorComponent } from './dialog/doctor/doctor.component';
 import { NavigationComponent } from './doctor/navigation/navigation.component';
 import { HomeComponent } from './doctor/home/home.component';
 import { NotificationComponent } from './doctor/notification/notification.component';
