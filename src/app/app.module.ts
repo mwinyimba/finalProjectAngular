@@ -39,6 +39,7 @@ import { MessageComponent } from './lab-tech/message/message.component';
 import { RegNavComponent } from './pages/reg-nav/reg-nav.component';
 import { RegHomeComponent } from './pages/reg-home/reg-home.component';
 import { RegLogoutComponent } from './pages/reg-logout/reg-logout.component';
+import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
  
 
 @NgModule({
@@ -62,6 +63,7 @@ import { RegLogoutComponent } from './pages/reg-logout/reg-logout.component';
     RegNavComponent,
     RegHomeComponent,
     RegLogoutComponent,
+    LabHomeComponent,
     
     
   ],

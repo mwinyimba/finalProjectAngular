@@ -1,17 +1,24 @@
-<nav class="navbar navbar-expand-lg bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand">
-            <span mat-button [matMenuTriggerFor]="menu" class="bar"><i class="fa fa-bars"></i>
-            </span>
-            <mat-menu #menu="matMenu">
-                <a routerLink="home"><button mat-menu-item><i class="fa fa-home"></i> Home</button></a>
-                <a routerLink="notification"><button mat-menu-item><i class="fa fa-bell"></i> Notification</button></a>
-                <a routerLink="partient"><button mat-menu-item><i class="fa fa-wheelchair"></i> patients</button></a>
-                <a routerLink="emergency"><button mat-menu-item><i class="fa fa-medkit"></i> Emergency</button></a>
-                <a routerLink="patient-form"><button mat-menu-item><i class="fa fa-calendar"></i> Schedule</button></a>
-                <a routerLink=""><button mat-menu-item><i class="fa fa-sign-out"></i> Logout</button></a>
-            </mat-menu>
-        </a>
-    </div>
-</nav>
-<router-outlet></router-outlet>
+<div id="mySidenav" class="sidenav">
+    <nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="btn-close btn-close-white btn"></span></a>
+            <div class="lnk">
+                <a routerLink="home2"><i class="fa fa-home active"></i> Home</a>
+        </div>
+        <span class="divider"></span>
+        <div class="lnk">
+            <a routerLink="patient-form" class="lnk"><i class="fa fa-wheelchair"></i> patients</a>
+        </div>
+       
+        <div class="lnk">
+            <a routerLink="message" class="lnk"><i class="fa fa-comments"></i> Message</a>
+        </div>
+        
+        <div class="lnk">
+            <a routerLink="" class="lnk"><i class="fa fa-sign-out"></i> Logout</a>
+        </div>
+    </nav>
+</div>
+<div id="main">
+    <span style="font-size:30px;" class="navbar p-4 navbar-expand-lg mybg text-white"
+        onclick="openNav()"><span style="cursor: pointer;">&#9776;</span></span>
+    <router-outlet></router-outlet>

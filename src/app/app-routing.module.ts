@@ -14,6 +14,7 @@ import { PatientFormComponent } from './lab-tech/patient-form/patient-form.compo
 import { MessageComponent } from './lab-tech/message/message.component';
 import { RegHomeComponent } from './pages/reg-home/reg-home.component';
 import { RegNavComponent } from './pages/reg-nav/reg-nav.component';
+import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
 
 const routes: Routes = [
   {
@@ -50,24 +51,7 @@ const routes: Routes = [
       path: 'details',
       component:PatientDetailComponent,
     },
-    {
-      path: '',
-      component: LabtechNavComponent,
-      children:[
-        {
-          path:'patient-form',
-          component:PatientFormComponent,
-        },
-        {
-          path:'message',
-          component:MessageComponent,
-        },
-        
-    
-    
-      ]
-
-    },
+  
   
   ]
 },
@@ -84,7 +68,29 @@ const routes: Routes = [
   },
   ]
 
-}
+},
+{
+  path: '',
+  component: LabtechNavComponent,
+  children:[
+    {
+      path:'home2',
+      component:LabHomeComponent
+    },
+    {
+      path:'patient-form',
+      component:PatientFormComponent,
+    },
+    {
+      path:'message',
+      component:MessageComponent,
+    },
+    
+
+
+  ]
+
+},
  
 
 ]
