@@ -4,13 +4,18 @@
             <div class="lnk">
                 <a routerLink="home2"><i class="fa fa-home active"></i> Home</a>
         </div>
-        <span class="divider"></span>
+        <div class="lnk">
+            <a routerLink="patients" class="lnk"><i class="fa fa-users"></i> Patient List</a>
+        </div>
         <div class="lnk">
             <a routerLink="patient-form" class="lnk"><i class="fa fa-file-excel"></i> Result</a>
         </div>
        
         <div class="lnk">
             <a routerLink="message" class="lnk"><i class="fa fa-comments"></i> Message</a>
+        </div>
+        <div class="lnk">
+            <a routerLink="lab-setting" class="lnk"><i class="fa fa-cogs"></i> Settings</a>
         </div>
         
         <div class="lnk">
@@ -20,5 +25,5 @@
 </div>
 <div id="main">
     <span style="font-size:30px;" class="navbar p-4 navbar-expand-lg mybg text-white"
-        onclick="openNav()"><span style="cursor: pointer;">&#9776;</span></span>
+        onclick="openNav()"><span style="cursor: pointer;">&#9776;</span> &emsp;LabTechnician</span>
     <router-outlet></router-outlet>

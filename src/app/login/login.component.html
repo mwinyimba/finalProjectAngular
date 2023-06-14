@@ -1,4 +1,4 @@
-<div class="container text-center card card-body  shadow  width bg-primary b">
+<!-- <div class="container text-center card card-body  shadow  width bg-primary b">
     <form class="mb-3 p-3">
         <div class="mb-3 ">
             <label for="validationTooltip01" class="form-label">username</label>
@@ -14,10 +14,35 @@
 
         </div>
         <div class="p-3">
-            <a routerLink="home"><button class="btn btn-success">Login</button></a>
+            <a routerLink="home1"><button class="btn btn-success">Login</button></a>
         </div>
     </form>
-</div>
+</div> -->
+
+<div class="container p-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">
+                <h1><i class="fa fa-sign-in text-primary"></i>
+                    LOGIN FORM</h1>
+                <div class="card card-body shadow text-center  bg-info">
+
+
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Username</label>
+                            <input type="email" class="form-control" id="email" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="p-3">
+                            <a routerLink="home"><button class="btn btn-success">Login</button></a>
+                        </div>
+
+                    </form>
+                </div>
 
 
 
@@ -35,4 +60,6 @@
 
 
 
-<router-outlet></router-outlet>
+
+
+                <router-outlet></router-outlet>

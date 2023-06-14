@@ -1,1 +1,83 @@
-<p>emergence works!</p>
+<div class="container p-4">
+    <div class="card card-body shadow">
+        <div class="modal-header card-body mybg text-white p-3"><i class="fas fa-comments"></i> Messages </div>
+        <div class="table-responsive">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td> <button class="btn W-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><i
+                                    class="fas fa-eye text-primary"></i> Khamis Jumbe</button></td>
+                        <td class="text-end"><button class="btn btn-success btn-sm t" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><i class="fas fa-trash"></i> Reply</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td> <button class="btn W-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><i
+                                    class="fas fa-eye text-primary"></i> Mwinyi Makame</button></td>
+                        <td class="text-end"><button class="btn btn-success btn-sm t" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><i class="fas fa-trash"></i> Reply</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <!--  delete Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="staticBackdropLabel">Delete Message!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <h2 class="alert alert-danger ">Are you sure youwant to Delete?</h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Read Modal -->
+            <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content p-2">
+                        <div class="">
+                            <div class="text-end p-2">
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"
+                                    aria-label="Close"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                            <hr>
+                        </div>
+                        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, eveniet eum soluta modi
+                            aperiam voluptates consequuntur amet vel. Facere nulla et consequuntur enim quod assumenda?
+                            Ducimus natus dolorem maxime nulla.</h2>
+                            <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+                        <!-- <div class="modal-footer">
+                            <div class="text-start">
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal"><i
+                                    class="fas fa-reply"></i> reply</button>
+                                </div>
+                        </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

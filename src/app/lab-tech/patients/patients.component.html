@@ -1,1 +1,105 @@
-<p>patients works!</p>
+<div class="contaner p-5 table-responsive">
+    <mat-card class="shadow">
+        <mat-card-header>
+            <mat-card-title>
+                <h2 class="fw-light"> Patient List</h2>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-borderless table-hover table-sm">
+                <thead class="mybg text-white text-center h5 ">
+                    <tr>
+                        <th class="fw-light">Sn</th>
+                        <th class="fw-light">Patients Id</th>
+                        <th class="fw-light">Full Name</th>
+                        <th class="fw-light">Gender</th>
+                        <th class="fw-light"> View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let partient of partient,let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{partient.pId}}</td>
+                        <td>{{partient.Fname}}</td>
+                        <td>{{partient.Gender}}</td>
+
+                        <td class="text-end"><button class="btn btn-primary btn-sm t" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><i class="fa fa-stethoscope" ></i> Treat</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </mat-card-content>
+    </mat-card>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content p-3">
+                <div class="">
+                    <div class="text-end ">
+                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"
+                            aria-label="Close"><i class="fa fa-times"></i> Close</button>
+                    </div>
+        
+                </div>
+               
+    <div class="row">
+    
+        <div>
+            <div class="col-md-12">
+                <div class="modal-header mb-3">PARTIENT LAB RESULT <i class="fa fa-user"></i></div>
+                <div class="row">
+                        <div class="col-md-6 mb-3">
+                        <div class="Form-label">Partient Name:</div>
+                        <input type="text"  class="form-control card bg-white" value="{{pName}}" disabled>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="Form-label">Partient Id:</div>
+                        <input type="text"  class="form-control card bg-white" value="{{pId}}" disabled>
+                    </div>
+                <div class="col-md-6 mb-3">
+                    <div class="Form-label">Amount of Blood</div>
+                    <div><input type="text"  class="form-control card shadow-sm" required></div>
+                </div>
+                        <div class="col-md-6 mb-3">
+                    <div class="Form-label">HIV</div>
+    
+                    <div>
+                    <select name="" id=""  class="form-select" required>
+                        <option value="" selected hidden disabled></option>
+                        <option value="Positive">Positive</option>
+                        <option value="Negative">Negative</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="Form-label">Pressure</div>
+                        <div><input type="text"  class="form-control card shadow-sm"></div>
+                    </div>
+                            <div class="col-md-6 mb-3">
+                        <div class="Form-label">Weight</div>
+                        <div><input type="text"  class="form-control"></div>
+                    </div>
+                    </div>
+                <div class="row">
+                <div class="col-md-12 mb-3 text-center">
+                    
+                   <a routerLink="#"><button mat-raised-button color="primary">Send to Doctor</button></a> 
+                </div>
+                     
+                </div>
+            </div>
+        </div>
+             
+
+    </div>
+    
+
+
+
+</div>

@@ -15,6 +15,11 @@ import { MessageComponent } from './lab-tech/message/message.component';
 import { RegHomeComponent } from './pages/reg-home/reg-home.component';
 import { RegNavComponent } from './pages/reg-nav/reg-nav.component';
 import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
+import { TrashComponent } from './doctor/trash/trash.component';
+import { LabSettingComponent } from './lab-tech/lab-setting/lab-setting.component';
+import { SettingComponent } from './doctor/setting/setting.component';
+import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
+import { PatientsComponent } from './lab-tech/patients/patients.component';
 
 const routes: Routes = [
   {
@@ -51,6 +56,14 @@ const routes: Routes = [
       path: 'details',
       component:PatientDetailComponent,
     },
+    {
+      path:'trash',
+      component:TrashComponent,
+    },
+    {
+      path:'setting',
+      component:SettingComponent,
+    }
   
   
   ]
@@ -64,8 +77,12 @@ const routes: Routes = [
       component:RegHomeComponent,
     },
     { path: 'patient',
-    component: ViewPatientComponent 
-  },
+    component: ViewPatientComponent ,
+    },
+    {
+      path:'reg-setting',
+      component:RegSettingComponent,
+    }
   ]
 
 },
@@ -85,6 +102,14 @@ const routes: Routes = [
       path:'message',
       component:MessageComponent,
     },
+    {
+      path:'lab-setteing',
+      component:LabSettingComponent,
+    },
+    {
+      path: 'patients',
+      component:PatientsComponent,
+    }
     
 
 

@@ -48,6 +48,10 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import { ReportComponent } from './doctor/report/report.component';
 import { LabReportComponent } from './lab-tech/lab-report/lab-report.component';
 import { RegReportComponent } from './pages/reg-report/reg-report.component';
+import { TrashComponent } from './doctor/trash/trash.component';
+import { SettingComponent } from './doctor/setting/setting.component';
+import { LabSettingComponent } from './lab-tech/lab-setting/lab-setting.component';
+import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
 
 
 
@@ -76,6 +80,10 @@ import { RegReportComponent } from './pages/reg-report/reg-report.component';
     ReportComponent,
     LabReportComponent,
     RegReportComponent,
+    TrashComponent,
+    SettingComponent,
+    LabSettingComponent,
+    RegSettingComponent,
     
     
   ],
