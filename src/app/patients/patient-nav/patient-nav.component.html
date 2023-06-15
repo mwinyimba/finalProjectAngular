@@ -1,0 +1,23 @@
+<div id="mySidenav" class="sidenav">
+    <nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="btn-close btn-close-white btn"></span></a>
+            <div class="lnk">
+                <a routerLink="home3"><i class="fa fa-home active"></i> Home</a>
+        </div>
+        <span class="divider"></span>
+        <div class="lnk">
+            <a routerLink="renew" class="lnk"><i class="fa fa-file-text"></i> Renew</a>
+        </div>
+        
+        <div class="lnk">
+            <a routerLink="setting-p" class="lnk"><i class="fa fa-cogs"></i> Settings</a>
+        </div>
+        <div class="lnk">
+            <a routerLink="" class="lnk"><i class="fa fa-sign-out"></i> Logout</a>
+        </div>
+    </nav>
+</div>
+<div id="main">
+    <span style="font-size:30px;" class="navbar p-4 navbar-expand-lg mybg text-white"
+        onclick="openNav()"><span style="cursor: pointer;">&#9776;</span></span>
+    <router-outlet></router-outlet>

@@ -20,6 +20,10 @@ import { LabSettingComponent } from './lab-tech/lab-setting/lab-setting.componen
 import { SettingComponent } from './doctor/setting/setting.component';
 import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
 import { PatientsComponent } from './lab-tech/patients/patients.component';
+import { PatientNavComponent } from './patients/patient-nav/patient-nav.component';
+import { PatientHomeComponent } from './patients/patient-home/patient-home.component';
+import { PatientRenewComponent } from './patients/patient-renew/patient-renew.component';
+import { PatientSettingComponent } from './patients/patient-setting/patient-setting.component';
 
 const routes: Routes = [
   {
@@ -116,6 +120,24 @@ const routes: Routes = [
   ]
 
 },
+{
+  path:'',
+  component:PatientNavComponent,
+  children:[
+      {
+        path:'home3',
+        component:PatientHomeComponent,
+      },
+      {
+        path:'renew',
+        component:PatientRenewComponent,
+      },
+      {
+        path:'setting-p',
+        component:PatientSettingComponent,
+      }
+  ]
+}
  
 
 ]

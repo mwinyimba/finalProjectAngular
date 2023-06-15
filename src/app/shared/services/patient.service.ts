@@ -8,8 +8,8 @@ import { Patient } from '../models/patient';
   providedIn: 'root'
 })
 export class PatientService {
-  private apiUrl: string = environment.apiUrl + 'patient'
-  constructor(private http: HttpClient) { }
+  public apiUrl: string = environment.apiUrl + 'patient'
+  constructor(public http: HttpClient) { }
 
   getAll(): Observable<Patient[]> {
     return this.http.get<Patient[]>(this.apiUrl+"/");

@@ -52,6 +52,11 @@ import { TrashComponent } from './doctor/trash/trash.component';
 import { SettingComponent } from './doctor/setting/setting.component';
 import { LabSettingComponent } from './lab-tech/lab-setting/lab-setting.component';
 import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
+import { PatientNavComponent } from './patients/patient-nav/patient-nav.component';
+import { PatientHomeComponent } from './patients/patient-home/patient-home.component';
+import { PatientRenewComponent } from './patients/patient-renew/patient-renew.component';
+import { PatientSettingComponent } from './patients/patient-setting/patient-setting.component';
+import { PatientService } from './shared/services/patient.service';
 
 
 
@@ -84,6 +89,10 @@ import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
     SettingComponent,
     LabSettingComponent,
     RegSettingComponent,
+    PatientNavComponent,
+    PatientHomeComponent,
+    PatientRenewComponent,
+    PatientSettingComponent,
     
     
   ],
@@ -108,11 +117,14 @@ import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
     CommonModule, 
     CalendarModule,
     FullCalendarModule,
+  
     
     
    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [PatientService],
+  bootstrap: [AppComponent],
+  
+
 })
 export class AppModule { }
