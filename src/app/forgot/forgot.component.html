@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="auth-content ">
+      <div class="card shadow" style=" border-radius: 15px;">
+        <div class="card-body bg">
+          <!-- <div class="" style="text-align: center;"> <img class="brand fa-spin" src="../../assets/d4.jpg" alt="e-latter" style="width: 10%"> </div> -->
+          <h3 class="text-center"><b>FORGOT PASSWORD</b></h3>
+          <form method="POST">
+           <div>
+            <label class="form-label"> <i class="fas fa-envelope"></i>Email:</label>
+            <input type="text" class="form-control mb-3 shadow card border" name="Uname" required autocomplete="off">
+          </div>
+          <div class="mb-3 my-2">
+            <label class="form-label"><i class="fas fa-user"></i>Username</label>
+            <input type="text" class="form-control mb-3 shadow card border" name="password" required autocomplete="off">
+          </div>
+          <div class="mb-3 my-2">
+            <label class="form-label"><i class="fas fa-key"></i> New password:</label>
+            <input type="text" class="form-control mb-3 shadow card border" name="password" required autocomplete="off">
+          </div>
+          <div class="mb-3 my-2">
+            <label class="form-label"><i class="fas fa-key"></i> Repeat password:</label>
+            <input type="text" class="form-control mb-3 shadow card border" name="password" required autocomplete="off">
+          </div>
+          <div>
+            <div class="row m-b-20">
+              <div class="col-md-6 mb-3">
+               <a><button type="button" name="" class="btn btn-dark w-100">RESET</button></a>
+             </div>
+             <div class="col-md-6">
+               <a routerLink=""> <button type="button" name="login" class="btn btn-primary w-100">LOGIN</button></a>
+             </div>
+           </div>
+           <p class="text-muted mb-2" align="center">Copyright &copy; The State University of Zanzibar </p>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+  </div>
+  <router-outlet></router-outlet>

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 import { ToastrModule } from 'ngx-toastr';
 
@@ -43,8 +43,7 @@ import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
 import { CommonModule } from '@angular/common';
 import { CalendarModule } from 'angular-calendar';
 import { FullCalendarModule } from '@fullcalendar/angular';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
+
 import { ReportComponent } from './doctor/report/report.component';
 import { LabReportComponent } from './lab-tech/lab-report/lab-report.component';
 import { RegReportComponent } from './pages/reg-report/reg-report.component';
@@ -57,6 +56,20 @@ import { PatientHomeComponent } from './patients/patient-home/patient-home.compo
 import { PatientRenewComponent } from './patients/patient-renew/patient-renew.component';
 import { PatientSettingComponent } from './patients/patient-setting/patient-setting.component';
 import { PatientService } from './shared/services/patient.service';
+import { ForgotComponent } from './forgot/forgot.component';
+import { PatientEmergenceComponent } from './patients/patient-emergence/patient-emergence.component';
+import { NavAdminComponent } from './admin/nav-admin/nav-admin.component';
+import { RegisterUserComponent } from './admin/register-user/register-user.component';
+import { GeneralReportComponent } from './admin/general-report/general-report.component';
+import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
+import { ViewUserComponent } from './admin/admin_page/view-user/view-user.component';
+import { AddUserComponent } from './admin/admin_page/add-user/add-user.component';
+import { EditUserComponent } from './admin/admin_page/edit-user/edit-user.component';
+import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
+
+
+
+
 
 
 
@@ -93,6 +106,16 @@ import { PatientService } from './shared/services/patient.service';
     PatientHomeComponent,
     PatientRenewComponent,
     PatientSettingComponent,
+    ForgotComponent,
+    PatientEmergenceComponent,
+    NavAdminComponent,
+    RegisterUserComponent,
+    GeneralReportComponent,
+    HomeAdminComponent,
+    ViewUserComponent,
+    AddUserComponent,
+    EditUserComponent,
+    AdminSettingComponent,
     
     
   ],
@@ -103,7 +126,7 @@ import { PatientService } from './shared/services/patient.service';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot() ,
+    
     MatToolbarModule ,
     MatIconModule,
     MatButtonModule,
@@ -117,6 +140,11 @@ import { PatientService } from './shared/services/patient.service';
     CommonModule, 
     CalendarModule,
     FullCalendarModule,
+    FormsModule, 
+    MatFormFieldModule,
+    AppRoutingModule,
+    
+    
   
     
     

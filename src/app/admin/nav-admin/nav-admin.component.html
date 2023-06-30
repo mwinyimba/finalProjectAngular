@@ -2,20 +2,22 @@
     <nav>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="btn-close btn-close-white btn"></span></a>
             <div class="lnk">
-                <a routerLink="home3"><i class="fa fa-home active"></i> Home</a>
+                <a routerLink="home4"><i class="fa fa-home active text-white"></i> Home</a>
         </div>
         <span class="divider"></span>
         <div class="lnk">
-            <a routerLink="patient-emer" class="lnk"><i class="fa fa-medkit"></i> Emergence</a>
+            <a routerLink="regester1" class="lnk"><i class="fa fa-user text-white" ></i> User</a>
         </div>
-        <div class="lnk">
-            <a routerLink="renew" class="lnk"><i class="fa fa-file-text"></i> Renew</a>
+        <div class="lnk ">
+            <a routerLink="regester_user" class="lnk"><i class="fa fa-wheelchair"></i> Pertients</a>
         </div>
         
         <div class="lnk">
-            <a routerLink="setting-p" class="lnk"><i class="fa fa-cogs"></i> Settings</a>
+            <a routerLink="admin_setting" class="lnk"><i class="fa fa-cogs"></i> Settings</a>
         </div>
-
+        <div class="lnk">
+            <a routerLink="general_report" class="lnk"><i class="fa fa-file-pdf"></i> Report</a>
+        </div>
         <div class="lnk">
             <a routerLink="" class="lnk"><i class="fa fa-sign-out"></i> Logout</a>
         </div>
@@ -23,5 +25,5 @@
 </div>
 <div id="main">
     <span style="font-size:30px;" class="navbar p-4 navbar-expand-lg mybg text-white"
-        onclick="openNav()"><span style="cursor: pointer;">&#9776;</span>&emsp;Patient</span>
+        onclick="openNav()"><span style="cursor: pointer;">&#9776;</span>&emsp;Manager</span>
     <router-outlet></router-outlet>

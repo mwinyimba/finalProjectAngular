@@ -24,12 +24,26 @@ import { PatientNavComponent } from './patients/patient-nav/patient-nav.componen
 import { PatientHomeComponent } from './patients/patient-home/patient-home.component';
 import { PatientRenewComponent } from './patients/patient-renew/patient-renew.component';
 import { PatientSettingComponent } from './patients/patient-setting/patient-setting.component';
+import { ForgotComponent } from './forgot/forgot.component';
+import { PatientEmergenceComponent } from './patients/patient-emergence/patient-emergence.component';
+import { NavAdminComponent } from './admin/nav-admin/nav-admin.component';
+import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
+import { RegisterUserComponent } from './admin/register-user/register-user.component';
+import { GeneralReportComponent } from './admin/general-report/general-report.component';
+import { ViewUserComponent } from './admin/admin_page/view-user/view-user.component';
+import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
   },
+  {
+    path:'forgot',
+    component:ForgotComponent
+
+  },
+  // doctor
   {
   path: '',
   component:NavigationComponent,
@@ -72,6 +86,7 @@ const routes: Routes = [
   
   ]
 },
+// register
 {
   path: '',
   component:RegNavComponent,
@@ -90,6 +105,7 @@ const routes: Routes = [
   ]
 
 },
+// lab
 {
   path: '',
   component: LabtechNavComponent,
@@ -107,7 +123,7 @@ const routes: Routes = [
       component:MessageComponent,
     },
     {
-      path:'lab-setteing',
+      path:'lab-setting',
       component:LabSettingComponent,
     },
     {
@@ -120,6 +136,7 @@ const routes: Routes = [
   ]
 
 },
+// patient
 {
   path:'',
   component:PatientNavComponent,
@@ -135,7 +152,38 @@ const routes: Routes = [
       {
         path:'setting-p',
         component:PatientSettingComponent,
+      },
+      {
+        path:'patient-emer',
+        component:PatientEmergenceComponent,
       }
+  ]
+},
+{
+  path:'',
+  component:NavAdminComponent,
+  children:[
+    {
+      path:'home4',
+      component:HomeAdminComponent,
+    },
+    {
+      path:"regester1",
+      component:ViewUserComponent,
+    },
+    {
+      path:"general_report",
+      component:GeneralReportComponent
+    }
+    ,
+    {
+      path:"regester_user",
+      component:RegisterUserComponent
+    },
+    {
+      path:"admin_setting",
+      component:AdminSettingComponent
+    }
   ]
 }
  

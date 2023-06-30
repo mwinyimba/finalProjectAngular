@@ -1,65 +1,48 @@
-<!-- <div class="container text-center card card-body  shadow  width bg-primary b">
-    <form class="mb-3 p-3">
-        <div class="mb-3 ">
-            <label for="validationTooltip01" class="form-label">username</label>
-            <div>
-                <input type="text" placeholder="Username" required>
+<div class="wrapper">
+    <div class="auth-content ">
+        <div class="card shadow" style=" border-radius: 15px;">
+            <div class="card-body bg">
+
+                <h3 class="text-center"><b>LOGIN</b></h3>
+                <hr>
+                <form  [formGroup]="loginForm" (ngSubmit)="onLogin" >
+                    <div>
+                        <label class="form-label"> <i class="fas fa-user"></i> Username:</label>
+                        <input id="username" type="username" class="form-control mb-3 shadow card border"  name="username"
+                             placeholder="Username" formControlName="username" [(ngModel)]="loginForm.username">
+                             <!-- <span class="text-danger" *ngIf="username && username.invalid && username.touched">username is required</span> -->
+                    </div>
+                    <div class="mb-3 my-2">
+                        <label class="form-label"><i class="fas fa-lock"></i> Password:</label>
+                        <input id="password" formControlName="username" type="text" class="form-control mb-3 shadow card border" name="password" 
+                             placeholder="Password" [(ngModel)]="loginForm.password">
+                    </div>
+                    <!-- <div class="form-check form-switch mb-4 my-2">
+                        <input type="checkbox" class="form-check-input" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault"> Show Password</label>
+                    </div> -->
+                    <div>
+                        <button  name="login"
+                                class="btn btn-success btn-sm w-100 mb-4" (click)="onLogin()" >Login</button>
+
+                        <div class="row m-b-20">
+                            <div class="col-md-6 mb-3">
+                                <a routerLink="forgot"> <button type="button" name="login"
+                                        class="btn btn-dark btn-sm  w-100"> Forgot password ?</button></a>
+                            </div>
+                            <div class="col-md-6">
+
+                                <a routerLink="account"> <button type="button" name="Create"
+                                        class="btn btn-primary btn-sm  w-100"> Register </button></a>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-2" align="center">Copyright &copy; The State University of Zanzobar </p>
+                    </div>
+                </form>
+
             </div>
         </div>
-        <div class="">
-            <label for="validationTooltip02" class="form-label">password</label>
-            <div>
-                <input type="number" placeholder="password" required>
-            </div>
+    </div>
+</div>
 
-        </div>
-        <div class="p-3">
-            <a routerLink="home1"><button class="btn btn-success">Login</button></a>
-        </div>
-    </form>
-</div> -->
-
-<div class="container p-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <h1 class="text-center">
-                <h1><i class="fa fa-sign-in text-primary"></i>
-                    LOGIN FORM</h1>
-                <div class="card card-body shadow text-center  bg-info">
-
-
-                    <form>
-                        <div class="form-group">
-                            <label for="email">Username</label>
-                            <input type="email" class="form-control" id="email" placeholder="Username">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="p-3">
-                            <a routerLink="home"><button class="btn btn-success">Login</button></a>
-                        </div>
-
-                    </form>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <router-outlet></router-outlet>
+<router-outlet></router-outlet>
