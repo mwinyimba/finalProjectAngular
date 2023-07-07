@@ -1,20 +1,6 @@
-.right-hand{
-    text-align: right;
-    font-size: 25px;
+.zero{
+    border-radius: 0px;
 }
-.b-design{
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+.none{
     border: none;
-}
-.b-design:hover{
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border: none;
-}
-.numexpand:hover{
-    cursor: pointer;
-    
 }

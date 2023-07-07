@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./general-report.component.css']
 })
 export class GeneralReportComponent {
-
+constructor(){}
+printThisPage(){
+  window.print();
+}
 }

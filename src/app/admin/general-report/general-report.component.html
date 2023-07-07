@@ -1,67 +1,109 @@
-<div class="mt-3">
-    <div class="h5 text-center text-muted my-0"><i class="fa fa-file-pdf text-primary mb-3"></i> REPORT</div>
-    <div class=" container card shadow-lg none zero p-2" style="width: 95%;">
-        <div class="row p-2" >
-            <div class="col-md-6">
-            <div class="card p-2 zero none shadow-sm">
-                <div class="card-header none zero h5 fw-light my-2">Profile Status</div>
-                <div class="row">
-                    <div class="col-md-4 ">
-                    <label class="form-label" for="Total">Total</label>
-                    <input class="form-control w-25 zero text-center" type="text" readonly value="34">
-                </div>
-                <div class="col-md-4 ">
-                    <label class="form-label" for="Male">Male</label>
-                    <input class="form-control w-25 zero text-center" readonly type="text" value="34">
-                </div>
-                <div class="col-md-4 ">
-                    <label class="form-label" for="Female">Female</label>
-                    <input class="form-control w-25 zero zero text-center" readonly type="text" value="34">
-                </div>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-md-6">
-            <div class="row p-2" >
-                <div class="card p-2 zero none shadow-sm">
-                    <div class="card-header none zero h5 fw-light my-2">Pertients</div>
+<div class="container-fluid">
+    <div class="mt-3">
+        <div class="h5 text-center text-muted my-0"><i class="fa fa-file-pdf text-secondary mb-3"></i> REPORT</div>
+        <div class="container text-end">
+            <button (click)="printThisPage()" class="btn btn-secondary btn-sm"><i class="fa fa-print"></i>
+                Print</button>
+        </div>
+        <!-- 1st Card -->
+        <div id="print">
+            <div class="mb-4">
+                <div class="container modal-header zero h5 fw-light my-2">Profile Status</div>
+                <div class=" container card zero none bg-secondary">
                     <div class="row">
-                        <div class="col-md-4 ">
-                        <label class="form-label" for="Total">Total</label>
-                        <input class="form-control w-25 zero text-center" type="text" readonly value="34">
+                        <div class="col-md-6 mb-3 p-2">
+                            <div class="text-white h6 modal-header ">Patients:</div>
+                            <div class="card p-2 zero none">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Total">Total</label>
+                                        <input class="form-control zero text-center" type="text" readonly value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Male">Male</label>
+                                        <input class="form-control zero text-center" readonly type="text" value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Female">Female</label>
+                                        <input class="form-control zero zero text-center" readonly type="text"
+                                            value="34">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3 p-2">
+                            <div class="text-white h6 modal-header ">Pertients:</div>
+                            <div class="card p-2 zero none">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Total">Total</label>
+                                        <input class="form-control zero text-center" type="text" readonly value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Male">Male</label>
+                                        <input class="form-control zero text-center" readonly type="text" value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Female">Female</label>
+                                        <input class="form-control zero zero text-center" readonly type="text"
+                                            value="34">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4 ">
-                        <label class="form-label" for="Male">Male</label>
-                        <input class="form-control w-25 zero text-center" readonly type="text" value="34">
-                    </div>
-                    <div class="col-md-4 ">
-                        <label class="form-label" for="Female">Female</label>
-                        <input class="form-control w-25 zero zero text-center" readonly type="text" value="34">
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
+            <!-- 2nd Card -->
+            <div class="mb-4">
+                <div class="container modal-header zero h5 fw-light my-2">HIV Status</div>
+                <div class=" container card zero none bg-secondary">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 p-2">
+                            <div class="text-white h6 modal-header ">Pertients:</div>
+                            <div class="card p-2 zero none">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Total">Total</label>
+                                        <input class="form-control zero text-center" type="text" readonly value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Male">Male</label>
+                                        <input class="form-control zero text-center" readonly type="text" value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Female">Female</label>
+                                        <input class="form-control zero zero text-center" readonly type="text"
+                                            value="34">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="row p-2" >
-                    <div class="card p-2 zero none shadow-sm">
-                        <div class="card-header none zero h5 fw-light my-2">Pertients</div>
-                        <div class="row">
-                            <div class="col-md-4 ">
-                            <label class="form-label" for="Total">Total</label>
-                            <input class="form-control w-25 zero text-center" type="text" readonly value="34">
-                        </div>
-                        <div class="col-md-4 ">
-                            <label class="form-label" for="Male">Male</label>
-                            <input class="form-control w-25 zero text-center" readonly type="text" value="34">
-                        </div>
-                        <div class="col-md-4 ">
-                            <label class="form-label" for="Female">Female</label>
-                            <input class="form-control w-25 zero zero text-center" readonly type="text" value="34">
-                        </div>
+                        <div class="col-md-6 mb-3 p-2">
+                            <div class="text-white h6 modal-header ">Pertients:</div>
+                            <div class="card p-2 zero none">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Total">Total</label>
+                                        <input class="form-control zero text-center" type="text" readonly value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Male">Male</label>
+                                        <input class="form-control zero text-center" readonly type="text" value="34">
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label class="form-label" for="Female">Female</label>
+                                        <input class="form-control zero zero text-center" readonly type="text"
+                                            value="34">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
