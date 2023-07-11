@@ -33,7 +33,7 @@ export class AddUserComponent {
   }
   reload() {
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/user']);
+      this.router.navigate(['/regester1']);
     });
   }
 

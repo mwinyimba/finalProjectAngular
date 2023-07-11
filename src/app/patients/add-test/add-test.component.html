@@ -1,0 +1,39 @@
+<!-- nimeeta formGroup kutoka katika component.ts na method ya onFormSubmit -->
+<form [formGroup]="testForm" (ngSubmit)="onFormSubmit()">
+    <h1>Registration Form</h1><hr>
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline" class="example-full-width ">
+            <mat-label>name</mat-label>
+            <input matInput type="text" placeholder="name" formControlName="name">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline" class="example-full-width ">
+            <mat-label>emergence</mat-label>
+            <input matInput type="text" placeholder="emergence" formControlName="emergence">
+          </mat-form-field>
+        </div>
+      
+       
+     
+      
+     
+  
+  
+      
+    
+      
+        
+      </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-12">
+        <div mat-dialog-actions>
+          <button mat-raised-button color="warn" class="btn btn-danger" matDialogClose="no">Close</button>
+          <button mat-raised-button color="primary">save</button>
+        </div>
+      </div>
+    </div>
+    
+  </form>

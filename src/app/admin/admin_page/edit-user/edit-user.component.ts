@@ -27,18 +27,23 @@ export class EditUserComponent {
       id: data.id,
       first_name: data.first_name,
       last_name: data.last_name,
-      address: data.address,
+      age: data.age,
       phone_No: data.phone_No,
       email: data.email,
+      password:data.password,
       username:data.username,
+      address:data.address,
+      status:data.status,
       role_name: data.role_name,
+
+     
       
     });
   }
 
   reload() {
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/user']);
+      this.router.navigate(['/regester1']);
     });
   }
 

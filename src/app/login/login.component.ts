@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
     }else if (this.loginForm.username == "doctor" && this.loginForm.password == 'doctor123'){
       this.router.navigateByUrl("home")
     } else{
-        this.router.navigateByUrl("home4")
+        this.router.navigateByUrl("home3")
     }
   }
 
