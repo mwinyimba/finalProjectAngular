@@ -9,29 +9,29 @@ import { Test } from '../models/test';
 })
 export class TestService {
 
-  public apiUrl: string = environment.apiUrl + 'test'
+  api = " http://localhost:9090/api/test/test"
   constructor(public http: HttpClient) { }
 
-  getAll(): Observable<Test[]> {
-    return this.http.get<Test[]>(this.apiUrl+"/");
+  getAllTest(): Observable<Test[]> {
+    return this.http.get<Test[]>(this.api);
   }
 
-  add(data: any): Observable<any> {
-    return this.http.post(this.apiUrl+"/", data);
+  addTest(test:Test): Observable<object> {
+    return this.http.post(`${this.api}`,test);
   }
 
   getById(id: any): Observable<Test> {
-    const url = `${this.apiUrl}/${id}`;
+    const url = `${this.api}/${id}`;
     return this.http.get<Test>(url);
   }
 
   update(id: any, body: any): Observable<Test> {
-    const url = `${this.apiUrl}/${id}`;
+    const url = `${this.api}/${id}`;
     return this.http.put<Test>(url, body);
   }
 
   delete(id: any): Observable<any> {
-    const url = `${this.apiUrl}/${id}`;
+    const url = `${this.api}/${id}`;
     return this.http.delete(url);
   }
 }

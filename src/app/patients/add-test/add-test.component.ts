@@ -10,37 +10,37 @@ import { TestService } from 'src/app/shared/services/test.service';
   styleUrls: ['./add-test.component.css']
 })
 export class AddTestComponent {
-  testForm: FormGroup 
+  // testForm: FormGroup 
 
-  constructor(
-    public dialogRef: MatDialogRef<AddTestComponent>,
-    private _fb: FormBuilder,
-    private router: Router,
-    private testservice: TestService
-  ) {
-    this.testForm = this._fb.group({
-      name: '',
-      emergence:'',
+  // constructor(
+  //   public dialogRef: MatDialogRef<AddTestComponent>,
+  //   private _fb: FormBuilder,
+  //   private router: Router,
+  //   private testservice: TestService
+  // ) {
+  //   this.testForm = this._fb.group({
+  //     name: '',
+  //     emergence:'',
      
-    });
-  }
-  reload() {
-    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/patient-emer']);
-    });
-  }
+  //   });
+  // }
+  // reload() {
+  //   this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+  //     this.router.navigate(['/patient-emer']);
+  //   });
+  // }
 
-  onFormSubmit() {
-    if (this.testForm.valid) {
-      this.testservice.add(this.testForm.value).subscribe({
-        next: () => {
-          alert('Success to Add Data');
-          this.dialogRef.close();
-          this.reload();
-        },
-        error: () => {},
-      });
-    }
-  }
+  // onFormSubmit() {
+  //   if (this.testForm.valid) {
+  //     this.testservice.add(this.testForm.value).subscribe({
+  //       next: () => {
+  //         alert('Success to Add Data');
+  //         this.dialogRef.close();
+  //         this.reload();
+  //       },
+  //       error: () => {},
+  //     });
+  //   }
+  // }
 
 }
