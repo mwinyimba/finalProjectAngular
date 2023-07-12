@@ -1,55 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  loginForm:any={
-    username:"",
-    password:"",
-  }
-// username: any;
-//   constructor(private fb:FormBuilder){
-//     this.createForm();
-    
-//   }
+export class LoginComponent {
+  showPassword = false;
+  password2 = '';
+  
 
-  // createForm(){
-  //   this.loginForm=this.fb.group({
-  //     username:['',Validators.required,Validators.minLength(9), Validators.pattern("[a-zA-Z].*")],
-  //     password:['',Validators.required , Validators.minLength(8) , Validators.pattern("[a-z,A-Z]+$")]
+  constructor(private router:Router){ }
+  username: any;
+  password: any;
 
-  //   });
-  // }
-  constructor(private router:Router){
-
-  }
-  ngOnInit(): void {
-    
-   }
-
-//   loginForm = new FormGroup({
-//     username: new FormControl('', [Validators.required , Validators.minLength(7), Validators.pattern("[a-zA-Z].*")]),
-//     password: new FormControl('', [Validators.required , Validators.minLength(8), Validators.pattern("[a-zA-Z].*")]),
-//   })
-// username: any;
-
-//   submitForm(){
-//     console.log(this.loginForm.get("username"));
-//   }
 
   onLogin(){
-    if(this.loginForm.username == "admin" && this.loginForm.password == "admin112"){
-      this.router.navigateByUrl('home1')
-    }else if (this.loginForm.username == "doctor" && this.loginForm.password == 'doctor123'){
-      this.router.navigateByUrl("home")
-    } else{
-        this.router.navigateByUrl("home3")
+    if(this.username === 'regester' && this.password === 'regester123'){
+      this.router.navigate(['/home1']);
+    }else if(this.username === 'patient' && this.password === 'patient123'){
+      this.router.navigate(['/home3']);
+    }else if(this.username === 'manager' && this.password === 'manager123'){
+      this.router.navigate(['/home4'])
+    }else if(this.username === 'doctor' && this.password === 'doctor123'){
+      this.router.navigate(['/home'])
+    }else if(this.username === 'lab' && this.password ==='lab123'){
+      this.router.navigate(['/home2'])
     }
   }
 

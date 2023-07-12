@@ -1,48 +1,37 @@
 <div class="wrapper">
     <div class="auth-content ">
-        <div class="card shadow" style=" border-radius: 15px;">
-            <div class="card-body bg">
-
-                <h3 class="text-center"><b>LOGIN</b></h3>
-                <hr>
-                <form  [formGroup]="loginForm" (ngSubmit)="onLogin" >
-                    <div>
-                        <label class="form-label"> <i class="fas fa-user"></i> Username:</label>
-                        <input id="username" type="username" class="form-control mb-3 shadow card border"  name="username"
-                             placeholder="Username" formControlName="username" [(ngModel)]="loginForm.username">
-                             <!-- <span class="text-danger" *ngIf="username && username.invalid && username.touched">username is required</span> -->
+        <mat-card>
+            <div class="text-center">
+                <img src="../../assets/p/d4.jpg" alt="" width="20%">
+            </div>
+            <span class="display-6 text-center mb-3">Login</span>
+            <mat-card-content>
+                <form (ngSubmit)="onLogin()">
+                    <div class="mb-3">
+                       <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
                     </div>
-                    <div class="mb-3 my-2">
-                        <label class="form-label"><i class="fas fa-lock"></i> Password:</label>
-                        <input id="password" formControlName="username" type="text" class="form-control mb-3 shadow card border" name="password" 
-                             placeholder="Password" [(ngModel)]="loginForm.password">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="{{showPassword ? 'text' : 'password'}}" class="form-control" id="password" [(ngModel)]="password" name="password" required>
                     </div>
-                    <!-- <div class="form-check form-switch mb-4 my-2">
-                        <input type="checkbox" class="form-check-input" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault"> Show Password</label>
-                    </div> -->
-                    <div>
-                        <button  name="login"
-                                class="btn btn-success btn-sm w-100 mb-4" (click)="onLogin()" >Login</button>
-
-                        <div class="row m-b-20">
-                            <div class="col-md-6 mb-3">
-                                <a routerLink="forgot"> <button type="button" name="login"
-                                        class="btn btn-dark btn-sm  w-100"> Forgot password ?</button></a>
-                            </div>
-                            <div class="col-md-6">
-
-                                <a routerLink="account"> <button type="button" name="Create"
-                                        class="btn btn-primary btn-sm  w-100"> Register </button></a>
-                            </div>
-                        </div>
-                        <p class="text-muted mb-2" align="center">Copyright &copy; The State University of Zanzobar </p>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" (change)="showPassword = !showPassword"  class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Show password</label>
+                    </div>
+                    <div class="text-center">
+                       <button type="submit" mat-raised-button color="primary" [disabled]="!(password && username)" class="w-100">Login</button>
                     </div>
                 </form>
-
-            </div>
-        </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <a routerLink="account"> <h4 class="text-muted">Create account</h4></a>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href=""> <h4 class="text-muted">Forgot password ?</h4></a>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
-
-<router-outlet></router-outlet>
