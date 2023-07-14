@@ -67,6 +67,7 @@ import { AddUserComponent } from './admin/admin_page/add-user/add-user.component
 import { EditUserComponent } from './admin/admin_page/edit-user/edit-user.component';
 import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
 import { AddTestComponent } from './patients/add-test/add-test.component';
+import { ProfileComponent } from './patients/profile/profile.component';
 
 
 
@@ -118,6 +119,7 @@ import { AddTestComponent } from './patients/add-test/add-test.component';
     EditUserComponent,
     AdminSettingComponent,
     AddTestComponent,
+    ProfileComponent,
     
     
   ],

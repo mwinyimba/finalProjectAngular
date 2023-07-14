@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <div class="card card-body p-3 shadow none">
-        <form action="">
+        <form action="" >
                 <div class="col-md-4 mb-0">
                     <label for="label" class="form-label">User Id No:</label>
                     <input type="text" class="text form-control shadow none mb-4" placeholder="12345">
@@ -8,28 +8,32 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <label for="label" class="form-label">First Name:</label>
-                    <input type="text" class="text form-control shadow none mb-4" placeholder="Mwiny">
-                </div>
-                <div class="col-md-4">
-                    <label for="label" class="form-label">Middle Name:</label>
-                    <input type="text" class="text form-control shadow none mb-4" placeholder="Ameir">
+                    <label for="label" class="form-label">Name:</label>
+                    <input type="text" class="text form-control shadow none mb-4" placeholder="Mwiny1">
                 </div>
                 <div class="col-md-4">
                     <label for="label" class="form-label">Address:</label>
-                    <input type="text" class="text form-control shadow none mb-4" placeholder="Fuoni">
+                    <input type="text" class="text form-control shadow none mb-4" placeholder="Founi">
                 </div>
                 <div class="col-md-4">
-                    <label for="label" class="form-label">Gender</label>
-                    <input type="text" class="text form-control shadow none mb-4" placeholder="Male">
+                    <label for="label" class="form-label">PhoneNumber:</label>
+                    <input type="text" class="text form-control shadow none mb-4" placeholder="PhoneNumber">
+                </div>
+                <div class="col-md-4">
+                    <label for="label" class="form-label">Email</label>
+                    <input type="text" class="text form-control shadow none mb-4" placeholder="Email">
                 </div>
                 <div class="col-md-4">
                     <label for="label" class="form-label">Phone Number:</label>
-                    <input type="text" class="text form-control shadow none mb-4" placeholder="12345">
+                    <input type="text" class="text form-control shadow none mb-4" placeholder="0777975789">
+                </div>
+                <div class="col-md-4">
+                    <label for="label" class="form-label"> Gender:</label>
+                    <input type="text" class="text form-control shadow none mb-4" placeholder="Male">
                 </div>
 
                 <div class="col-md-16">
-                    <button class="btn btn-success">Download Form</button>
+                    <button class="btn btn-success" (click)="printThisPage()">Download Form</button>
                 </div>
             </div>
         </form>

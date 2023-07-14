@@ -20,9 +20,9 @@ export class LoginComponent {
 
   onLogin(){
     if(this.username === 'regester' && this.password === 'regester123'){
-      this.router.navigate(['/home1']);
+      this.router.navigate(['/home1'])
     }else if(this.username === 'patient' && this.password === 'patient123'){
-      this.router.navigate(['/home3']);
+      this.router.navigate(['/home3'])
     }else if(this.username === 'manager' && this.password === 'manager123'){
       this.router.navigate(['/home4'])
     }else if(this.username === 'doctor' && this.password === 'doctor123'){

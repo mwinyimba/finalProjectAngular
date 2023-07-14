@@ -1,5 +1,5 @@
-.wrapper {
-  background-image: "./../../assets/p/d4.jpg";
+.wrapper {  
+  background-image: url('../../assets/p/d1.jpg');
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

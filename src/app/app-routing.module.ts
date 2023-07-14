@@ -32,6 +32,7 @@ import { RegisterUserComponent } from './admin/register-user/register-user.compo
 import { GeneralReportComponent } from './admin/general-report/general-report.component';
 import { ViewUserComponent } from './admin/admin_page/view-user/view-user.component';
 import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
+import { ProfileComponent } from './patients/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -156,9 +157,15 @@ const routes: Routes = [
       {
         path:'patient-emer',
         component:PatientEmergenceComponent,
+      },
+      {
+        path:'profile',
+        component:ProfileComponent,
       }
   ]
 },
+
+// admin
 {
   path:'',
   component:NavAdminComponent,
