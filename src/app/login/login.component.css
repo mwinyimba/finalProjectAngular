@@ -1,5 +1,8 @@
 .wrapper {  
   background-image: url('../../assets/p/d1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -47,7 +47,6 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { ReportComponent } from './doctor/report/report.component';
 import { LabReportComponent } from './lab-tech/lab-report/lab-report.component';
 import { RegReportComponent } from './pages/reg-report/reg-report.component';
-import { TrashComponent } from './doctor/trash/trash.component';
 import { SettingComponent } from './doctor/setting/setting.component';
 import { LabSettingComponent } from './lab-tech/lab-setting/lab-setting.component';
 import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
@@ -68,6 +67,10 @@ import { EditUserComponent } from './admin/admin_page/edit-user/edit-user.compon
 import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
 import { AddTestComponent } from './patients/add-test/add-test.component';
 import { ProfileComponent } from './patients/profile/profile.component';
+import { TreatComponent } from './doctor/treat/treat.component';
+import { AddResultComponent } from './lab-tech/patient-form/add-result/add-result.component';
+import { EditResultComponent } from './lab-tech/patient-form/edit-result/edit-result.component';
+import { TreatpComponent } from './doctor/treat/treatp/treatp.component';
 
 
 
@@ -100,7 +103,6 @@ import { ProfileComponent } from './patients/profile/profile.component';
     ReportComponent,
     LabReportComponent,
     RegReportComponent,
-    TrashComponent,
     SettingComponent,
     LabSettingComponent,
     RegSettingComponent,
@@ -120,6 +122,10 @@ import { ProfileComponent } from './patients/profile/profile.component';
     AdminSettingComponent,
     AddTestComponent,
     ProfileComponent,
+    TreatComponent,
+    AddResultComponent,
+    EditResultComponent,
+    TreatpComponent,
     
     
   ],

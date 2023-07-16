@@ -1,48 +1,24 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { EditResultComponent } from 'src/app/lab-tech/patient-form/edit-result/edit-result.component';
 import { AddPatientComponent } from 'src/app/pages/patient/add-patient/add-patient.component';
+import { EditPatientComponent } from 'src/app/pages/patient/edit-patient/edit-patient.component';
 import { Lab } from 'src/app/shared/models/lab';
+import { Patient } from 'src/app/shared/models/patient';
 import { LabService } from 'src/app/shared/services/lab.service';
-
-
-import { AddResultComponent } from './add-result/add-result.component';
-import { EditResultComponent } from './edit-result/edit-result.component';
+import { PatientService } from 'src/app/shared/services/patient.service';
+import { TreatpComponent } from './treatp/treatp.component';
 
 @Component({
-  selector: 'app-patient-form',
-  templateUrl: './patient-form.component.html',
-  styleUrls: ['./patient-form.component.css']
+  selector: 'app-treat',
+  templateUrl: './treat.component.html',
+  styleUrls: ['./treat.component.css']
 })
-export class PatientFormComponent {
-  // lab:Lab = new Lab ()
-
-
-  // constructor(private labService:LabService){}
-  // ngOnInit(): void {
-   
-  // }
-
-  // sendResult(){
-  //   this.labService.fillResult(this.lab).subscribe((data)=>{
-  //     console.log(data)
-  //   } ,error => console.log(error));
-    
-  // }
-
-  // onSubmit(){
-  //   console.log(this.lab)
-  //   this.sendResult();
-  // }
-
-
-
-
-
+export class TreatComponent {
 
   labDetails: any;
 
@@ -76,13 +52,13 @@ export class PatientFormComponent {
     });
   }
 
-  onCreate() {
-    const options = {
-      width: '60%',
-      disableClose: true,
-    };
-    this.dialog.open(AddResultComponent, options);
-  }
+  // onCreate() {
+  //   const options = {
+  //     width: '60%',
+  //     disableClose: true,
+  //   };
+  //   this.dialog.open(AddResultComponent, options);
+  // }
 
   onEdit(item: Lab) {
     const options = {
@@ -90,7 +66,7 @@ export class PatientFormComponent {
       width: '60%',
       disableClose: true,
     };
-    this.dialog.open(EditResultComponent, options);
+    this.dialog.open(TreatpComponent, options);
   }
 
  
@@ -112,8 +88,5 @@ export class PatientFormComponent {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
    
- 
-  
-  }
 
-
+}

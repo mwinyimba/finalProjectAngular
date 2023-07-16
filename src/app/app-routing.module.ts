@@ -15,7 +15,7 @@ import { MessageComponent } from './lab-tech/message/message.component';
 import { RegHomeComponent } from './pages/reg-home/reg-home.component';
 import { RegNavComponent } from './pages/reg-nav/reg-nav.component';
 import { LabHomeComponent } from './lab-tech/lab-home/lab-home.component';
-import { TrashComponent } from './doctor/trash/trash.component';
+
 import { LabSettingComponent } from './lab-tech/lab-setting/lab-setting.component';
 import { SettingComponent } from './doctor/setting/setting.component';
 import { RegSettingComponent } from './pages/reg-setting/reg-setting.component';
@@ -33,6 +33,7 @@ import { GeneralReportComponent } from './admin/general-report/general-report.co
 import { ViewUserComponent } from './admin/admin_page/view-user/view-user.component';
 import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
 import { ProfileComponent } from './patients/profile/profile.component';
+import { TreatComponent } from './doctor/treat/treat.component';
 
 const routes: Routes = [
   {
@@ -76,8 +77,8 @@ const routes: Routes = [
       component:PatientDetailComponent,
     },
     {
-      path:'trash',
-      component:TrashComponent,
+      path:'treat',
+      component:TreatComponent,
     },
     {
       path:'setting',
