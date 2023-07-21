@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
     <div class="auth-content ">
         <mat-card>
             <div class="text-center p-3">
@@ -6,25 +6,66 @@
             </div>
             <span class="display-6 text-center mb-3">Login</span>
             <mat-card-content>
-                <form (ngSubmit)="onLogin()">
+                <form [formGroup]="loginForm"       (ngSubmit)="onLogin()">
                     <div class="mb-3">
                        <label for="exampleInputEmail1" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="{{showPassword ? 'text' : 'password'}}" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+                        <input type="{{showPassword ? 'text' : 'password'}}" class="form-control" id="password" [(ngModel)]="password" name="password" required  formControlName="username">
                     </div>
                     <div class="mb-3 form-check">
-                        <input type="checkbox" (change)="showPassword = !showPassword"  class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" (change)="showPassword = !showPassword"  class="form-check-input" id="exampleCheck1" formControlName="password">
                         <label class="form-check-label" for="exampleCheck1">Show password</label>
                     </div>
                     <div class="text-center">
-                       <button type="submit" mat-raised-button color="primary" [disabled]="!(password && username)" class="w-100">Login</button>
+                       <button type="submit" mat-raised-button color="primary"    [disabled]="!(password && username)" class="w-100">Login</button>
                     </div>
                 </form>
                 <div class="row mt-3">
                     
+                    <div class="col-md-6 text-end">
+                        <a href=""> <h4 class="text-muted">Forgot password ?</h4></a>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div> -->
+
+
+
+
+<div class="wrapper">
+    <div class="auth-content">
+        <mat-card>
+            <div class="text-center p-3">
+                <img src="../../assets/p/d4.jpg" alt="" width="20%">
+            </div>
+            <span class="display-6 text-center mb-3">Login</span>
+            <mat-card-content>
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" formControlName="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="password"
+                            formControlName="password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" (change)="showPassword = !showPassword" class="form-check-input"
+                            id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Show password</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" mat-raised-button color="primary"
+                            [disabled]="loginForm.invalid" class="w-100">Login</button>
+                    </div>
+                </form>
+                <div class="row mt-3">
                     <div class="col-md-6 text-end">
                         <a href=""> <h4 class="text-muted">Forgot password ?</h4></a>
                     </div>

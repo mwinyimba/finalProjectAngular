@@ -25,15 +25,15 @@ export class EditUserComponent {
     const data = this.user;
     this.userForm = this._fb.group({
       id: data.id,
-      first_name: data.first_name,
-      last_name: data.last_name,
+      full_name: data.full_name,
+      
       age: data.age,
       phone_No: data.phone_No,
       email: data.email,
       password:data.password,
-      username:data.username,
+      
       address:data.address,
-      status:data.status,
+      statusPatient:data.statusPatients,
       role_name: data.role_name,
 
      

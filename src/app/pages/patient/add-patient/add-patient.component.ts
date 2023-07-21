@@ -3,28 +3,30 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { PatientService } from 'src/app/shared/services/patient.service';
+import { UserService } from 'src/app/shared/services/user.service';
 @Component({
   selector: 'app-add-patient',
   templateUrl: './add-patient.component.html',
   styleUrls: ['./add-patient.component.css'],
 })
 export class AddPatientComponent {
-  patientForm: FormGroup;
+  userForm: FormGroup;
 
   constructor(
     public dialogRef: MatDialogRef<AddPatientComponent>,
     private _fb: FormBuilder,
     private router: Router,
-    private patientServices: PatientService
+    private userService: UserService
   ) {
-    this.patientForm = this._fb.group({
-      name: '',
-      address:'',
+    this.userForm = this._fb.group({
+      full_name: '',
+       age:'',
       phoneNo: '',
       email: '',
-      dob: '',
-      place: '',
-      gender: '',
+      password: '',
+      address:'',
+      statusPatient: 'hajapimwa',
+      role_name: '',
     });
   }
   reload() {
@@ -34,8 +36,8 @@ export class AddPatientComponent {
   }
 
   onFormSubmit() {
-    if (this.patientForm.valid) {
-      this.patientServices.add(this.patientForm.value).subscribe({
+    if (this.userForm.valid) {
+      this.userService.add(this.userForm.value).subscribe({
         next: () => {
           alert('Success to Add Data');
           this.dialogRef.close();

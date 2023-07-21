@@ -3,11 +3,11 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { PatientService } from 'src/app/shared/services/patient.service';
 import { AddPatientComponent } from '../add-patient/add-patient.component';
-import { Patient } from 'src/app/shared/models/patient';
 import { EditPatientComponent } from '../edit-patient/edit-patient.component';
 import { MatDialog } from '@angular/material/dialog';
+import { UserService } from 'src/app/shared/services/user.service';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'app-view-patient',
@@ -16,17 +16,17 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ViewPatientComponent {
 
-  patientDetails: any;
+  userDetails: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<any>;
 
   dataSource!: MatTableDataSource<any>;
-  displayedColumns = ['id','name','address','phoneNo','gender','email','actions'];
+  displayedColumns = ['id','full_name','age','phone_No','email','password','address','statusPatient','role_name','actions'];
   notLoggedIn: any;
   constructor(
-    private patientService:PatientService,
+    private userService:UserService,
     private router: Router,
     private dialog:MatDialog
   ) {}
@@ -36,8 +36,10 @@ export class ViewPatientComponent {
   }
   name = 'MWINYI'
   onReload() {
-    this.patientService.getAll().subscribe({
+  
+    this.userService.getAll().subscribe({
       next: (res: any) => {
+        console.log(res)
         this.dataSource = res;
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
@@ -56,7 +58,7 @@ export class ViewPatientComponent {
     this.dialog.open(AddPatientComponent, options);
   }
 
-  onEdit(item: Patient) {
+  onEdit(item: User) {
     const options = {
       data: item,
       width: '60%',
@@ -67,8 +69,8 @@ export class ViewPatientComponent {
 
  
 
-  onDelete(item: Patient) {
-    this.patientService.delete(item.id).subscribe({
+  onDelete(item: User) {
+    this.userService.delete(item.id).subscribe({
       next: () => {
         alert("Delete succfull");
         this.onReload();

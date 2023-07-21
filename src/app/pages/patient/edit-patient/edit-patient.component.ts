@@ -3,34 +3,40 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Patient } from 'src/app/shared/models/patient';
+import { User } from 'src/app/shared/models/user';
 import { PatientService } from 'src/app/shared/services/patient.service';
+import { UserService } from 'src/app/shared/services/user.service';
 @Component({
   selector: 'app-edit-patient',
   templateUrl: './edit-patient.component.html',
   styleUrls: ['./edit-patient.component.css'],
 })
 export class EditPatientComponent {
-  patientForm!: FormGroup;
+  userForm!: FormGroup;
 
   constructor(
     public dialogRef: MatDialogRef<EditPatientComponent>,
     private _fb: FormBuilder,
     private router: Router,
-    private patientServices:PatientService,
-    @Inject(MAT_DIALOG_DATA) public patient: Patient,
+    private userSerivce:UserService,
+    @Inject(MAT_DIALOG_DATA) public user: User,
   ) {}
 
   ngOnInit(): void {
-    const data = this.patient;
-    this.patientForm = this._fb.group({
+    const data = this.user;
+    this.userForm = this._fb.group({
       id: data.id,
-      name: data.name,
-      address: data.address,
-      phoneNo: data.phoneNo,
+      full_name: data.full_name,
+      age:data.age,
+      phoneNo: data.phone_No,
       email: data.email,
-      dob: data.dob,
-      place: data.place,
-      gender: data.gender,
+      password: data.password,
+      address: data.address,
+      statusPatient: data.statusPatients,
+      role_name: data.role_name,
+      
+
+      
     });
   }
 
@@ -42,10 +48,10 @@ export class EditPatientComponent {
 
   onFormSubmit() {
    
-    let id = this.patientForm.value.id;
-    let data =  this.patientForm.value;
-    if (this.patientForm.valid) {
-      this.patientServices.update(id, data).subscribe({
+    let id = this.userForm.value.id;
+    let data =  this.userForm.value;
+    if (this.userForm.valid) {
+      this.userSerivce.update(id, data).subscribe({
         next: () => {
           alert('Success to Update Data');
           this.dialogRef.close();

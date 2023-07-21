@@ -16,8 +16,13 @@ export class UserService {
     return this.http.get<User[]>(this.apiUrl+"/");
   }
 
+
   add(data: any): Observable<any> {
     return this.http.post(this.apiUrl+"/", data);
+  }
+
+  login(data: any): Observable<any> {
+    return this.http.post(this.apiUrl+"/login", data);
   }
 
   getById(id: any): Observable<User> {

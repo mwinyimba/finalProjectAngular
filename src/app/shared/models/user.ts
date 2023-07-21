@@ -1,13 +1,11 @@
 export interface User {
     id?: number;
-    first_name: string;
-    last_name: string ;
-    age: string;
+    full_name: string;
+    age: string ;
     phone_No: string;
     email: string;
-    password: string;
-    username: string;
+    password: string;  
     address: string;
-    status: string;
+    statusPatients:string;
     role_name:string;
 }
