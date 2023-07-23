@@ -1,50 +1,41 @@
 <!-- nimeeta formGroup kutoka katika component.ts na method ya onFormSubmit -->
-<form [formGroup]="labForm" (ngSubmit)="onFormSubmit()">
-    <h1>Treat Form</h1><hr>
-      <div class="row">
-        <div class="col-sm-12">
-          <mat-form-field appearance="outline" class="example-full-width ">
-            <mat-label>patient_name</mat-label>
-            <input matInput type="text" placeholder="Name" formControlName="">
-          </mat-form-field>
-        </div>
-        <div class="col-sm-6">
-          <mat-form-field appearance="outline" class="example-full-width ">
-            <mat-label>amount_blood</mat-label>
-            <input matInput type="text" placeholder="Amount of Blood" formControlName="">
-          </mat-form-field>
-        </div>
-        <div class="col-sm-6">
-            <mat-form-field appearance="outline" class="example-full-width ">
-              <mat-label>HIV</mat-label>
-              <mat-select formControlName="">
-                <mat-option value="Male">Positive</mat-option>
-                <mat-option value="Female">Negative</mat-option>
-              </mat-select>
-            </mat-form-field>
-           
-          </div>
-        <div class="col-sm-6">
-          <mat-form-field appearance="outline" class="example-full-width ">
-            <mat-label>pressure</mat-label>
-            <input matInput type="text" placeholder="Pressure" formControlName="">
-          </mat-form-field>
-        </div>
-        <div class="col-sm-6">
-          <mat-form-field appearance="outline" class="example-full-width ">
-            <mat-label>weight</mat-label>
-            <input matInput type="weight" formControlName="">
-          </mat-form-field>
-        </div>     
-      </div>
-    <hr>
+<form [formGroup]="treatForm" (ngSubmit)="onFormSubmit()">
+  <h1>Treat Form</h1><hr>
     <div class="row">
       <div class="col-sm-12">
-        <div mat-dialog-actions>
-          <button mat-raised-button color="warn" class="btn btn-danger" matDialogClose="no">Close</button>
-          <button mat-raised-button color="primary">save</button>
-        </div>
+        <mat-form-field appearance="outline" class="example-full-width ">
+          <mat-label>Medicals</mat-label>
+          <input matInput type="text" placeholder="Medicals" formControlName="medicals" >
+        </mat-form-field>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field appearance="outline" class="example-full-width ">
+          <mat-label>treatedDate</mat-label>
+          <input matInput type="date" placeholder="TreatedDate" formControlName="treatedDate">
+        </mat-form-field>
+      </div>
+    
+      <div class="col-sm-6">
+        <mat-form-field appearance="outline" class="example-full-width ">
+          <mat-label>ReturnDate</mat-label>
+          <input matInput type="date" placeholder="ReturnDate" formControlName="ReturnDate">
+        </mat-form-field>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field appearance="outline" class="example-full-width ">
+          <mat-label>status</mat-label>
+          <input matInput type="text" formControlName="status">
+        </mat-form-field>
+      </div>     
+    </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" class="btn btn-danger" matDialogClose="no">Close</button>
+        <button mat-raised-button color="primary">save</button>
       </div>
     </div>
-    
-  </form>
+  </div>
+  
+</form>

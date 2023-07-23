@@ -1,46 +1,61 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { Treatment } from 'src/app/shared/models/treatment';
 import { LabService } from 'src/app/shared/services/lab.service';
+import { TreatmentService } from 'src/app/shared/services/treatment.service';
 
 @Component({
   selector: 'app-treatp',
   templateUrl: './treatp.component.html',
   styleUrls: ['./treatp.component.css']
 })
-export class TreatpComponent {
-  labForm: FormGroup;
+export class TreatpComponent implements OnInit{
+  treatForm!: FormGroup;
 
   constructor(
     public dialogRef: MatDialogRef<TreatpComponent>,
     private _fb: FormBuilder,
     private router: Router,
-    private labService: LabService
+    private treatmentService: TreatmentService,
+    @Inject(MAT_DIALOG_DATA) public treatment: Treatment
   ) {
-    this.labForm = this._fb.group({
-      patient_name: '',
-      amount_blood:'',
-      hiv: '',
-      pressure: '',
-      weight: '',
-     
+
+  }
+
+  ngOnInit(): void {
+    const patient =this.treatment;
+    var labTechId = localStorage.getItem("userId");
+    
+    this.treatForm = this._fb.group({
+      
+      medicals:'',
+      treatedDate:'',
+      ReturnDate:'',
+      status:'',
+      patientId:patient.id,
+      labTech:labTechId
     });
   }
+
   reload() {
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/patient-form']);
+      this.router.navigate(['/partient']);
     });
   }
 
   onFormSubmit() {
-    if (this.labForm.valid) {
-      this.labService.add(this.labForm.value).subscribe({
+    console.log(this.treatForm.value)
+    if (this.treatForm.valid) {
+      this.treatmentService.add(this.treatForm.value).subscribe({
         next: () => {
           alert('Success to Add Data');
           this.dialogRef.close();
           this.reload();
+          
         },
+        
         error: () => {},
       });
     }
