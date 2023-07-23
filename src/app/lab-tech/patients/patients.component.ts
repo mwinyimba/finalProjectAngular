@@ -5,7 +5,11 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { EditPatientComponent } from 'src/app/pages/patient/edit-patient/edit-patient.component';
+import { User } from 'src/app/shared/models/user';
 import { PatientService } from 'src/app/shared/services/patient.service';
+import { UserService } from 'src/app/shared/services/user.service';
+import { AddRComponent } from './add-r/add-r.component';
 
 @Component({
   selector: 'app-patients',
@@ -70,10 +74,10 @@ export class PatientsComponent {
   @ViewChild(MatTable) table!: MatTable<any>;
 
   dataSource!: MatTableDataSource<any>;
-  displayedColumns = ['id','name','address','phoneNo','gender','email',];
+  displayedColumns = ['id','full_name','age','phone_No','email','address','actions',];
   notLoggedIn: any;
   constructor(
-    private patientService:PatientService,
+    private userService:UserService,
     private router: Router,
     private dialog:MatDialog
   ) {}
@@ -83,16 +87,26 @@ export class PatientsComponent {
   }
   name = 'MWINYI'
   onReload() {
-    this.patientService.getAll().subscribe({
+    this.userService.getAllByStatus().subscribe({
       next: (res: any) => {
         this.dataSource = res;
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        
       },
       error: () => {
       },
     });
+  }
+
+  onAdd(item: User) {
+    const options = {
+      data: item,
+      width: '60%',
+      disableClose: true,
+    };
+    this.dialog.open(AddRComponent, options);
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

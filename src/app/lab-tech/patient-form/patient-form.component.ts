@@ -66,10 +66,13 @@ export class PatientFormComponent {
   onReload() {
     this.labService.getAll().subscribe({
       next: (res: any) => {
+        console.log(res)
         this.dataSource = res;
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+
+        
       },
       error: () => {
       },
@@ -95,17 +98,17 @@ export class PatientFormComponent {
 
  
 
-  onDelete(item: Lab) {
-    this.labService.delete(item.id).subscribe({
-      next: () => {
-        alert("Delete succefull");
-        this.onReload();
-      },
-      error: (err) => {
-        this.onReload();
-      },
-    });
-  }
+  // onDelete(item: Lab) {
+  //   this.labService.delete(item.id).subscribe({
+  //     next: () => {
+  //       alert("Delete succefull");
+  //       this.onReload();
+  //     },
+  //     error: (err) => {
+  //       this.onReload();
+  //     },
+  //   });
+  // }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

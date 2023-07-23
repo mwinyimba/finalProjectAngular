@@ -15,6 +15,9 @@ export class UserService {
   getAll(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl+"/");
   }
+  getAllByStatus(): Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl+"/status");
+  }
 
 
   add(data: any): Observable<any> {
