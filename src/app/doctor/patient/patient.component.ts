@@ -11,6 +11,8 @@ import { EditPatientComponent } from 'src/app/pages/patient/edit-patient/edit-pa
 import { Patient } from 'src/app/shared/models/patient';
 import { PatientService } from 'src/app/shared/services/patient.service';
 import { environment } from 'src/environment/environment';
+import { TreatpComponent } from '../treat/treatp/treatp.component';
+import { TreatmentService } from 'src/app/shared/services/treatment.service';
 
 @Component({
   selector: 'app-patient',
@@ -48,17 +50,17 @@ export class PatientComponent {
   
   // constructor(){}
 
-  patientDetails: any;
+  treatDetails: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<any>;
 
   dataSource!: MatTableDataSource<any>;
-  displayedColumns = ['id','medicals','treatedDate','ReturnDate','status',];
+  displayedColumns = ['id','medical','treatedDate','returnDate','status',];
   notLoggedIn: any;
   constructor(
-    private patientService:PatientService,
+    private tratService:TreatmentService,
     private router: Router,
     private dialog:MatDialog
   ) {}
@@ -68,7 +70,7 @@ export class PatientComponent {
   }
   name = 'MWINYI'
   onReload() {
-    this.patientService.getAll().subscribe({
+    this.tratService.getAll().subscribe({
       next: (res: any) => {
         this.dataSource = res;
         this.dataSource = new MatTableDataSource(res);

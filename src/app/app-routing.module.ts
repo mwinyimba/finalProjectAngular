@@ -7,7 +7,6 @@ import { NotificationComponent } from './doctor/notification/notification.compon
 import { PatientComponent } from './doctor/patient/patient.component';
 import { ScheduleComponent } from './doctor/schedule/schedule.component';
 import { EmergenceComponent } from './doctor/emergence/emergence.component';
-import { PatientDetailComponent } from './doctor/patient-detail/patient-detail.component';
 import { LoginComponent } from './login/login.component';
 import { LabtechNavComponent } from './lab-tech/labtech-nav/labtech-nav.component';
 import { PatientFormComponent } from './lab-tech/patient-form/patient-form.component';
@@ -72,10 +71,10 @@ const routes: Routes = [
       component:EmergenceComponent,
     },
 
-    {
-      path: 'details',
-      component:PatientDetailComponent,
-    },
+    // {
+    //   path: 'details',
+    //   component:PatientDetailComponent,
+    // },
     {
       path:'treat',
       component:TreatComponent,

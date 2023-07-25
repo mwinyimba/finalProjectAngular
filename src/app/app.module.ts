@@ -25,7 +25,6 @@ import { ViewPatientComponent } from './pages/patient/view-patient/view-patient.
 
 
 import { PatientComponent } from './doctor/patient/patient.component';
-import { PatientDetailComponent } from './doctor/patient-detail/patient-detail.component';
 import { EmergenceComponent } from './doctor/emergence/emergence.component';
 import { ScheduleComponent } from './doctor/schedule/schedule.component';
 import { NotificationComponent } from './doctor/notification/notification.component';
@@ -87,7 +86,7 @@ import { AddRComponent } from './lab-tech/patients/add-r/add-r.component';
     EditPatientComponent,
     ViewPatientComponent,
     PatientComponent,
-    PatientDetailComponent,
+    
     EmergenceComponent,
     ScheduleComponent,
     NotificationComponent,
