@@ -45,7 +45,7 @@
             </div>
             <span class="display-6 text-center mb-3">Login</span>
             <mat-card-content>
-                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()" autocomplete="off">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" formControlName="username" required>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" (change)="showPassword = !showPassword" class="form-check-input"
-                            id="exampleCheck1">
+                            id="exampleCheck1" autocomplete="off">
                         <label class="form-check-label" for="exampleCheck1">Show password</label>
                     </div>
                     <div class="text-center">

@@ -24,6 +24,7 @@ export class AddResultComponent {
       hiv: '',
       pressure: '',
       weight: '',
+      status:'kashapimwa',
       
     });
   }

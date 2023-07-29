@@ -19,16 +19,14 @@ export class AddUserComponent {
     private userService: UserService
   ) {
     this.userForm = this._fb.group({
-      first_name: '',
-      last_name:'',
+      full_name: '',
       age:'',
-      phone_No: '',
-      email: '',
-      password: '',
-      username: '',
-      address:'',
-      status:'',
-      role_name:'',
+     phone_No: '',
+     email: '',
+     password: '',
+     address:'',
+     gender:'',
+     role_name: '',
     });
   }
   reload() {
@@ -39,7 +37,7 @@ export class AddUserComponent {
 
   onFormSubmit() {
     if (this.userForm.valid) {
-      this.userService.add(this.userForm.value).subscribe({
+      this.userService.insertStaff(this.userForm.value).subscribe({
         next: () => {
           alert('Success to Add Data');
           this.dialogRef.close();

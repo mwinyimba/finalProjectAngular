@@ -22,7 +22,7 @@ export class ViewUserComponent {
   @ViewChild(MatTable) table!: MatTable<any>;
 
   dataSource!: MatTableDataSource<any>;
-  displayedColumns = ['id','first_name','last_name','age','phone_No','age','email','password','username','address','status','role_name','actions'];
+  displayedColumns = ['id','full_name','age','phone_No','email','address','gender','role_name','actions'];
   notLoggedIn: any;
   constructor(
     private userService:UserService,

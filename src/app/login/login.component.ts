@@ -73,6 +73,11 @@ export class LoginComponent implements OnInit{
           localStorage.setItem("fullname" , response.fullname)
           localStorage.setItem("roleName" , response.role)
           this.router.navigate(['/home']);
+        }else if (response.role == "manager"){
+          localStorage.setItem("userId" , response.id)
+          localStorage.setItem("fullname" , response.fullname)
+          localStorage.setItem("roleName" , response.role)
+          this.router.navigate(['/home4']);
         }
 
         // // Redirect to the appropriate route based on the user role or any other criteria

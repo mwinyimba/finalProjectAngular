@@ -28,6 +28,13 @@ export class UserService {
     return this.http.post(this.apiUrl+"/login", data);
   }
 
+  insertStaff(data: any):Observable<any>{
+    return this.http.post(this.apiUrl+"/manager", data)
+  }
+  getAllStaff(): Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl+"/manager");
+  }
+
   getById(id: any): Observable<User> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<User>(url);

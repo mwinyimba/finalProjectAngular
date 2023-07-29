@@ -10,6 +10,8 @@ import { UserService } from 'src/app/shared/services/user.service';
   styleUrls: ['./add-patient.component.css'],
 })
 export class AddPatientComponent {
+  showPassword = false;
+  password2 = '';
   userForm: FormGroup;
 
   constructor(
@@ -20,13 +22,14 @@ export class AddPatientComponent {
   ) {
     this.userForm = this._fb.group({
       full_name: '',
-       age:'',
-      phoneNo: '',
+      age: '',
+      phone_No: '',
+      type_sickle: '',
       email: '',
       password: '',
-      address:'',
+      address: '',
       statusPatient: 'hajapimwa',
-      role_name: '',
+      role_name: 'patient',
     });
   }
   reload() {

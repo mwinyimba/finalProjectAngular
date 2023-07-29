@@ -1,80 +1,74 @@
-<!-- nimeeta formGroup kutoka katika component.ts na method ya onFormSubmit -->
 <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
-  <h1>Registration Form</h1><hr>
-    <div class="row">
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>first_name</mat-label>
-          <input matInput type="text" placeholder="first_name" formControlName="first_name">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>last_name</mat-label>
-          <input matInput type="text" placeholder="last_name" formControlName="last_name">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>age</mat-label>
-          <input matInput type="text" placeholder="age" formControlName="age">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Phone_NO</mat-label>
-          <input matInput type="number" placeholder="PhoneNumber" formControlName="phone_No">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Email</mat-label>
-          <input matInput type="text" placeholder="email" formControlName="email">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Password</mat-label>
-          <input matInput type="text" formControlName="password">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Address</mat-label>
-          <input matInput type="text" formControlName="address">
-        </mat-form-field>
-      </div>
-
-
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>username</mat-label>
-          <input matInput type="text" placeholder="username" formControlName="username">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>status</mat-label>
-          <input matInput type="text" placeholder="status" formControlName="status">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>role_name</mat-label>
-          <input matInput type="text" placeholder="role_name" formControlName="role_name">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <!-- <mat-form-field appearance="outline" class="example-full-width ">
-          <mat-label>Gender</mat-label>
-          <mat-select formControlName="gender">
-            <mat-option value="Male">Male</mat-option>
-            <mat-option value="Female">Female</mat-option>
-          </mat-select>
-        </mat-form-field> -->
-   
-      </div>
+  <h1>Staff Form</h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Full_Name</mat-label>
+        <input matInput type="text" placeholder="full_name" formControlName="full_name">
+      </mat-form-field>
     </div>
+  
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>age</mat-label>
+        <input matInput type="text" placeholder="age" formControlName="age">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Phone_NO</mat-label>
+        <input matInput type="number" placeholder="PhoneNumber" formControlName="phone_No">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" placeholder="email" formControlName="email">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" formControlName="address">
+      </mat-form-field>
+    </div>
+    <!-- <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>status</mat-label>
+        <input matInput type="text" placeholder="status" formControlName="status">
+      </mat-form-field>
+    </div> -->
+  
+  
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline" class="example-full-width ">
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="role_name">
+          <mat-option value="doctor">doctor</mat-option>
+          <mat-option value="regester">regester</mat-option>
+          <mat-option value="lab">lab</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
   <hr>
   <div class="row">
     <div class="col-sm-12">
@@ -84,5 +78,5 @@
       </div>
     </div>
   </div>
-  
+
 </form>
