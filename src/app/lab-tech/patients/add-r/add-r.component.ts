@@ -33,6 +33,7 @@ export class AddRComponent implements OnInit {
       hiv: '',
       pressure: '',
       weight: '',
+      status:'kapimwa',
       patientId:patient.id,
       labTech:labTechId
     });

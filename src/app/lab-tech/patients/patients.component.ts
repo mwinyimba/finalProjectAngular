@@ -93,7 +93,7 @@ export class PatientsComponent {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        
+       
       },
       error: () => {
       },

@@ -11,6 +11,7 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 export class AddUserComponent {
   userForm: FormGroup 
+  
 
   constructor(
     public dialogRef: MatDialogRef<AddUserComponent>,

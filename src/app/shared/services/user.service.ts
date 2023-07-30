@@ -39,6 +39,10 @@ export class UserService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<User>(url);
   }
+  getByPatientId(id:number): Observable<User> {
+    const url = `${this.apiUrl+" /patient/{id}"}/${id}`;
+    return this.http.get<User>(url);
+  }
 
   update(id: any, body: any): Observable<User> {
     const url = `${this.apiUrl}/${id}`;

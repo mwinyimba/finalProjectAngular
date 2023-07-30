@@ -24,7 +24,10 @@ export class TreatmentService {
     return this.http.post(this.apiUrl+"/", data);
   }
 
-  
+  getByPatientId(id:any): Observable<Treatment> {
+    const url = `${this.apiUrl+"/patient"}/${id}`;
+    return this.http.get<Treatment>(url);
+  }
 
   getById(id: any): Observable<Treatment> {
     const url = `${this.apiUrl}/${id}`;

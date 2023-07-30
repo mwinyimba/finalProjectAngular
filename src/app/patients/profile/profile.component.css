@@ -1,3 +1,10 @@
 .mybg{
     background-color: #c7658b;
   }
+
+  @media print {
+    button{
+      display: none;
+    }
+    
+  }

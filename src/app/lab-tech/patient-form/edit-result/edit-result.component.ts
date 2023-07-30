@@ -30,6 +30,8 @@ export class EditResultComponent {
       hiv: data.hiv,
       pressure: data.pressure,
       weight: data.weight,
+
+      
      
     });
   }

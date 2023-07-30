@@ -1,46 +1,135 @@
-<div class="container mt-4">
-    <mat-card class="shadow">
-        <div class="modal-header p-1 text-white mybg">
-            <h4 class="fw-light"><i class="fas fa-doctor"></i>HEALTH STATUS:</h4>
-            <span class="btn"><i class="fa fa-print "></i> Print Result</span>
+<!-- 
+<div class="container">
+<div class="row p-5">
 
+    <div>
+        
+        <div class="col-md-12 card card-body shadow">
+            <div class="modal-header mb-3"><b>PATIENT LAB RESULT</b> <i class="fa fa-user"></i></div>
+           <div class="divider"></div>
+           <form (ngSubmit)="onSubmit()">
+            <div class="row">
+                
+                    <div class="col-md-6 mb-3">
+                    <div class="Form-label">Patient Name:</div>
+                    <input type="text"  class="form-control card bg-white" [(ngModel)]="lab.patient_name" name="patient_name" >
+                    
+                    
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="Form-label">Partient Id:</div>
+                    <input type="text"  class="form-control card bg-white" [(ngModel)] = "lab.id" name="id">
+                </div>
+            <div class="col-md-6 mb-3">
+                <div class="Form-label">Amount of Blood</div>
+                <div><input type="text"  class="form-control card shadow-sm" required [(ngModel)] = "lab.amount_blood" name="amount_blood"></div>
+            </div>
+                    <div class="col-md-6 mb-3">
+                <div class="Form-label">HIV</div>
+
+                <div>
+                <select name="" id=""  class="form-select" required [(ngModel)] = "lab.hiv" name="HIV">
+                    <option value="" selected hidden disabled></option>
+                    <option value="Positive">Positive</option>
+                    <option value="Negative">Negative</option>
+                </select>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="Form-label">Pressure</div>
+                    <div><input type="text"  class="form-control card shadow-sm" [(ngModel)]="lab.pressure" name="pressure"></div>
+                </div>
+                        <div class="col-md-6 mb-3">
+                    <div class="Form-label">Weight</div>
+                    <div><input type="text"  class="form-control" [(ngModel)]="lab.weight" name="weight"></div>
+                </div>
+                </div>
+            <div class="row">
+            <div class="col-md-12 mb-3 text-center">
+                
+               <button mat-raised-button color="primary" type="submit" name=" submit">Send to Doctor</button> 
+            </div>
+                 
+            </div>
+        </form>
         </div>
-        <div class="row">
-            
-        </div>
-        <h4 class="p-3 text-end">Clinick date: <span class="text-danger">29-23-2009</span> 
-        </h4>
-        <div class="row p-3">
-            <div class="col-md-4 mb-3">
-                <label for="hiv">
-                    HIV RESULT:
-                </label>
-                <input type="text" class="form-control" placeholder="Positive" readonly>
+    </div>
+     -->
+
+
+
+
+
+     <div class="h5 text-center text-muted my-0"><i class="fa fa-user mb-3 p-3"></i> Profile</div>
+
+
+     <div class=" container card shadow p-4 border  " style="width:95%">
+       <div class="container">
+            <div class="container text-end mb-3 ">
+                <button (click)="printThisPage()" class="btn btn-primary btn-sm "><i class="fa fa-print"></i>
+                    Print</button>
             </div>
-            <div class="col-md-4 mb-3">
-                <label for="hiv">
-                    PRESSURE:
-                </label>
-                <input type="text" class="form-control" placeholder="Positive" readonly>
-            </div>
-            <div class="col-md-4 mb-3">
-                <label for="hiv">
-                    WHEIGHT:
-                </label>
-                <input type="text" class="form-control" placeholder="Positive" readonly>
-            </div>
-            <div class="col-md-4 mb-3">
-                <label for="hiv">
-                    AMOUNT OF BLOOD:
-                </label>
-                <input type="text" class="form-control" placeholder="Positive" readonly>
-            </div>
-            <div class="col-md-4 mb-3">
-                <label for="hiv">
-                    AMOUNT OF BLOOD:
-                </label>
-                <input type="text" class="form-control" placeholder="Positive" readonly>
-            </div>
-        </div>
-    </mat-card>
-</div>
+         
+     
+         <div class=" ">
+           <div class="mat-elevation-z3 p-2 border table-responsive shadow">
+             <table mat-table [dataSource]="dataSource" class="table table-striped table-borderless table-hover table-sm">
+               <ng-container matColumnDef="id">
+                 <th mat-header-cell *matHeaderCellDef class="text-center"> <b>S/N.</b></th>
+                 <td mat-cell *matCellDef="let element; let i=index"> {{i+1}} </td>
+               </ng-container>
+     
+               <!-- <ng-container matColumnDef="patient_name">
+                 <th mat-header-cell *matHeaderCellDef class="text-center"> <b>Name</b> </th>
+                 <td mat-cell *matCellDef="let element"> {{element.patients.full_name}} </td>
+               </ng-container> -->
+     
+               <ng-container matColumnDef="amount_blood">
+                 <th mat-header-cell *matHeaderCellDef class="text-center"> <b>Amount of Blood</b> </th>
+                 <td mat-cell *matCellDef="let element"> {{element.labDetail.amount_blood}} </td>
+               </ng-container>
+     
+     
+               <ng-container matColumnDef="hiv">
+                 <th mat-header-cell *matHeaderCellDef class="text-center"><b>HIV</b></th>
+                 <td mat-cell *matCellDef="let element"> {{element.labDetail.hiv}} </td>
+               </ng-container>
+     
+               <ng-container matColumnDef="pressure">
+                 <th mat-header-cell *matHeaderCellDef class="text-center"><b>Pressure</b></th>
+                 <td mat-cell *matCellDef="let element"> {{element.labDetail.pressure}} </td>
+               </ng-container>
+     
+     
+               <ng-container matColumnDef="weight">
+                 <th mat-header-cell *matHeaderCellDef class="text-center"> <b>Weight</b></th>
+                 <td mat-cell *matCellDef="let element"> {{element.labDetail.weight}} </td>
+               </ng-container>
+               <ng-container matColumnDef="  medicals">
+                <th mat-header-cell *matHeaderCellDef class="text-center"> <b>  medicals</b></th>
+                <td mat-cell *matCellDef="let element"> {{element.medicals}} </td>
+              </ng-container>
+             
+
+               <ng-container matColumnDef="ReturnDate">
+                <th mat-header-cell *matHeaderCellDef class="text-center"> <b>ReturnDate</b></th>
+                <td mat-cell *matCellDef="let element"> {{element.returnDate}} </td>
+              </ng-container>
+     
+              
+     
+     
+     
+               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+               
+               <hr>
+             </table>
+             <!-- <mat-paginator #paginator [pageSizeOptions]="[10, 5, 15, 20]">
+             </mat-paginator> -->
+           </div>
+         </div>
+       </div>
+     </div>

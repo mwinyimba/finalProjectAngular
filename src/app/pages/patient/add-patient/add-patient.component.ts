@@ -27,6 +27,7 @@ export class AddPatientComponent {
       type_sickle: '',
       email: '',
       password: '',
+      gender:'',
       address: '',
       statusPatient: 'hajapimwa',
       role_name: 'patient',

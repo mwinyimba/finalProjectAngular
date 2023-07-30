@@ -12,6 +12,8 @@ import { UserService } from 'src/app/shared/services/user.service';
   styleUrls: ['./edit-patient.component.css'],
 })
 export class EditPatientComponent {
+  showPassword = false;
+  password2 = '';
   userForm!: FormGroup;
 
   constructor(
@@ -28,12 +30,16 @@ export class EditPatientComponent {
       id: data.id,
       full_name: data.full_name,
       age:data.age,
-      phoneNo: data.phone_No,
+      phone_No: data.phone_No,
       email: data.email,
       password: data.password,
+      gender:data.gender,
+      type_sickle:data.type_sickle,
       address: data.address,
       statusPatient: data.statusPatients,
       role_name: data.role_name,
+
+    
       
 
       
