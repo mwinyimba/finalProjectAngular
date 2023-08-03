@@ -71,6 +71,7 @@ import { AddResultComponent } from './lab-tech/patient-form/add-result/add-resul
 import { EditResultComponent } from './lab-tech/patient-form/edit-result/edit-result.component';
 import { TreatpComponent } from './doctor/treat/treatp/treatp.component';
 import { AddRComponent } from './lab-tech/patients/add-r/add-r.component';
+import { ViewMessageComponent } from './patients/patient-emergence/view-message/view-message.component';
 
 
 
@@ -127,6 +128,7 @@ import { AddRComponent } from './lab-tech/patients/add-r/add-r.component';
     EditResultComponent,
     TreatpComponent,
     AddRComponent,
+    ViewMessageComponent,
     
     
   ],

@@ -7,14 +7,16 @@ import { Router } from '@angular/router';
 import { AddPatientComponent } from 'src/app/pages/patient/add-patient/add-patient.component';
 import { EditPatientComponent } from 'src/app/pages/patient/edit-patient/edit-patient.component';
 import { Message } from 'src/app/shared/models/message';
+import { User } from 'src/app/shared/models/user';
 import { MessageService } from 'src/app/shared/services/message.service';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
-  selector: 'app-emergence',
-  templateUrl: './emergence.component.html',
-  styleUrls: ['./emergence.component.css']
+  selector: 'app-view-message',
+  templateUrl: './view-message.component.html',
+  styleUrls: ['./view-message.component.css']
 })
-export class EmergenceComponent {
+export class ViewMessageComponent {
   messageDetails: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -76,5 +78,6 @@ export class EmergenceComponent {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
 
 }

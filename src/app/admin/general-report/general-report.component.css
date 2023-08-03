@@ -4,3 +4,9 @@
 .zero{
     border-radius: 0px;
 }
+@media print {
+    button{
+      display: none;
+    }
+    
+  }

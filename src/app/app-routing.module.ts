@@ -33,6 +33,7 @@ import { ViewUserComponent } from './admin/admin_page/view-user/view-user.compon
 import { AdminSettingComponent } from './admin/admin-setting/admin-setting.component';
 import { ProfileComponent } from './patients/profile/profile.component';
 import { TreatComponent } from './doctor/treat/treat.component';
+import { ViewMessageComponent } from './patients/patient-emergence/view-message/view-message.component';
 
 const routes: Routes = [
   {
@@ -161,6 +162,10 @@ const routes: Routes = [
       {
         path:'profile',
         component:ProfileComponent,
+      },
+      {
+        path:'view-emergence',
+        component:ViewMessageComponent,
       }
   ]
 },

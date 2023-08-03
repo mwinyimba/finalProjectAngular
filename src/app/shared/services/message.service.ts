@@ -16,12 +16,20 @@ export class MessageService {
     return this.http.get<Message[]>(this.apiUrl+"/");
   }
 
-  add(data: any): Observable<any> {
+  inerstMessage(data: any): Observable<any> {
     return this.http.post(this.apiUrl+"/", data);
   }
 
+  // insertMessage(data: any): Observable<any> {
+  //   return this.http.post(this.apiUrl+"/", data);
+  // }
+
   getById(id: any): Observable<Message> {
     const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Message>(url);
+  }
+  getByIdMessage(id: any): Observable<Message> {
+    const url = `${this.apiUrl+"/message"}/${id}`;
     return this.http.get<Message>(url);
   }
 

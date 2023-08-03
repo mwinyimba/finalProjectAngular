@@ -74,7 +74,7 @@ export class PatientsComponent {
   @ViewChild(MatTable) table!: MatTable<any>;
 
   dataSource!: MatTableDataSource<any>;
-  displayedColumns = ['id','full_name','age','phone_No','email','address','actions',];
+  displayedColumns = ['id','full_name','age','phone_No','email','address','statusPatient','actions',];
   notLoggedIn: any;
   constructor(
     private userService:UserService,

@@ -3,10 +3,10 @@
     <h3 class="text-mutem text-danger">Please elaborate your probleam for easy to get help</h3>
         <div class="modal-header card-body mybg text-white"><i class="fas fa-comments"></i> Emergence </div>
         <div class="card shadow p-3">
-            <form class="text-center" (ngSubmit)="onSubmit()">
+            <form class="text-center" [formGroup]="messageForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <textarea name="" id="" class="form-control zero mb-3" placeholder="Write your health problem here"
-                        cols="50" rows="8" name="emeregence" [(ngModel)]="test.emergence"></textarea>
+                        cols="50" rows="8" name="emeregence" formControlName="message"></textarea>
                 </div>
                 <div class="">
                     <button type="submit" name="submit" class="btn btn-success">Send</button>
